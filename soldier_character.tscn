@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://bnwot7glcp2c0"]
+
+[ext_resource type="Script" uid="uid://d3vfninbxoaaj" path="res://scripts/soldier_character.gd" id="1_kdu6k"]
+[ext_resource type="Texture2D" uid="uid://blrtrutdmlhr4" path="res://Soldier_images/IDLE/SMS_Soldier_IDLE_WEST_strip4.png" id="1_w23r3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdu6k"]
+atlas = ExtResource("1_w23r3")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5hp1"]
+atlas = ExtResource("1_w23r3")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stusm"]
+atlas = ExtResource("1_w23r3")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5b6kw"]
+atlas = ExtResource("1_w23r3")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ikmaq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdu6k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5hp1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_stusm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5b6kw")
+}],
+"loop": true,
+"name": &"idle_left",
+"speed": 6.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d1mvt"]
+radius = 33.0
+height = 148.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_kdu6k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1.00002, -2.99999)
+scale = Vector2(7, 5.745)
+sprite_frames = SubResource("SpriteFrames_ikmaq")
+animation = &"idle_left"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -1)
+shape = SubResource("CapsuleShape2D_d1mvt")
