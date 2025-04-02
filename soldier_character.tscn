@@ -1,10 +1,11 @@
-[gd_scene load_steps=24 format=3 uid="uid://bnwot7glcp2c0"]
+[gd_scene load_steps=25 format=3 uid="uid://bnwot7glcp2c0"]
 
 [ext_resource type="Script" uid="uid://d3vfninbxoaaj" path="res://scripts/soldier_character.gd" id="1_kdu6k"]
 [ext_resource type="Texture2D" uid="uid://blrtrutdmlhr4" path="res://Soldier_images/IDLE/SMS_Soldier_IDLE_WEST_strip4.png" id="1_w23r3"]
 [ext_resource type="Texture2D" uid="uid://bin5qoqcm1vuu" path="res://Soldier_images/IDLE/SMS_Soldier_SOUTH_strip4.png" id="2_5b6kw"]
 [ext_resource type="Texture2D" uid="uid://c2lchf60wr8ai" path="res://Soldier_images/IDLE/SMS_Soldier_IDLE_NORTH_strip4.png" id="3_c5hp1"]
 [ext_resource type="Texture2D" uid="uid://c1r32mwuhpxus" path="res://Soldier_images/IDLE/SMS_Soldier_IDLE_EAST_strip4.png" id="4_ikmaq"]
+[ext_resource type="Texture2D" uid="uid://btppy3tfjdj06" path="res://SMS Military Base 8x8 Tiles 128x128.png" id="6_ikmaq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6svbg"]
 atlas = ExtResource("2_5b6kw")
@@ -157,3 +158,8 @@ animation = &"idle_left"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -1)
 shape = SubResource("CapsuleShape2D_d1mvt")
+
+[node name="SmsMilitaryBase8x8Tiles128x128" type="Sprite2D" parent="."]
+position = Vector2(460, 247)
+scale = Vector2(6.04688, 4.20703)
+texture = ExtResource("6_ikmaq")
