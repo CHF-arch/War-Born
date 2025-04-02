@@ -7,10 +7,12 @@
 radius = 90.0056
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+texture_filter = 1
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_kdu6k")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(8, 3)
 texture = ExtResource("2_kdu6k")
 
@@ -19,3 +21,4 @@ position = Vector2(-11, 41)
 shape = SubResource("CircleShape2D_c5hp1")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.4, 0.4)

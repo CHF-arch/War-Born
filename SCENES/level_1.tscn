@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://8qyhg0ir7gh3"]
 
-[ext_resource type="PackedScene" uid="uid://bnwot7glcp2c0" path="res://soldier_character.tscn" id="1_3hls8"]
+[ext_resource type="PackedScene" uid="uid://bnwot7glcp2c0" path="res://SCENES/soldier_character.tscn" id="1_3hls8"]
 
 [node name="level_1" type="Node2D"]
 
