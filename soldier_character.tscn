@@ -157,3 +157,5 @@ animation = &"idle_left"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -1)
 shape = SubResource("CapsuleShape2D_d1mvt")
+
+[node name="Camera2D" type="Camera2D" parent="."]
