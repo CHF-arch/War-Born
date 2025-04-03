@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bnwot7glcp2c0"]
 
 [ext_resource type="Script" uid="uid://d3vfninbxoaaj" path="res://scripts/soldier_character.gd" id="1_kdu6k"]
-[ext_resource type="Texture2D" uid="uid://d1cb4miy75sof" path="res://survivor-idle_shotgun_0.png" id="2_kdu6k"]
+[ext_resource type="Texture2D" uid="uid://bsuhkj7m7k5pb" path="res://Top_Down_Survivor/shotgun/idle/survivor-idle_shotgun_0.png" id="2_ebx12"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c5hp1"]
 radius = 90.0056
@@ -14,7 +14,7 @@ script = ExtResource("1_kdu6k")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(8, 3)
-texture = ExtResource("2_kdu6k")
+texture = ExtResource("2_ebx12")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-11, 41)
