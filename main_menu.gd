@@ -7,5 +7,6 @@ func _on_start_pressed() -> void:
 func _on_exit_pressed() -> void:
 	get_tree().quit()
 
+
 func _on_info_pressed() -> void:
-	get_tree().change_scene_to_file.bind("res://info_menu.tscn")
+	get_tree().change_scene_to_file("res://SCENES/infomenu.tscn")
