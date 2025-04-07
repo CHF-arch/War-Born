@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5e05fgq13623"]
+[gd_scene load_steps=7 format=3 uid="uid://c5e05fgq13623"]
 
 [ext_resource type="Script" uid="uid://davfqrl1pp06r" path="res://main_menu.gd" id="1_1hj21"]
 [ext_resource type="Texture2D" uid="uid://bx5l8j5ynccb8" path="res://main_menu/25188.png" id="2_1hj21"]
-[ext_resource type="Texture2D" uid="uid://d0y2qy8qdcptv" path="res://main_menu/Cool Text - WAR BORN 479745927731106.png" id="3_c2nvk"]
+[ext_resource type="Theme" uid="uid://dvvkfn8xhja4p" path="res://buttons/start_button.tres" id="3_68vjf"]
+[ext_resource type="Texture2D" uid="uid://c30eeqsxaljbw" path="res://main_menu/cooltext480058631182469.png" id="4_c2nvk"]
+[ext_resource type="Theme" uid="uid://211obe2ff3x" path="res://buttons/settings_button.tres" id="4_cek1n"]
+[ext_resource type="Theme" uid="uid://borsf41at585l" path="res://buttons/exit_button.tres" id="5_cek1n"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_1hj21")
@@ -15,33 +18,39 @@ texture = ExtResource("2_1hj21")
 
 [node name="START" type="Button" parent="."]
 texture_filter = 1
-offset_left = 857.0
-offset_top = 876.0
-offset_right = 1051.0
-offset_bottom = 921.0
+offset_left = 859.0
+offset_top = 784.0
+offset_right = 1059.0
+offset_bottom = 867.0
 pivot_offset = Vector2(164, 115)
-text = "START"
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource("3_68vjf")
 
 [node name="INFO" type="Button" parent="."]
 texture_filter = 1
-offset_left = 856.0
-offset_top = 951.0
-offset_right = 1050.0
-offset_bottom = 992.0
-text = "INFO"
+offset_left = 858.0
+offset_top = 887.0
+offset_right = 1059.0
+offset_bottom = 966.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource("4_cek1n")
 
 [node name="EXIT" type="Button" parent="."]
 texture_filter = 1
-offset_left = 857.0
-offset_top = 1019.0
-offset_right = 1051.0
-offset_bottom = 1060.0
-text = "EXIT"
+offset_left = 859.0
+offset_top = 987.0
+offset_right = 1061.0
+offset_bottom = 1066.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource("5_cek1n")
 
-[node name="CoolText-WarBorn479745927731106" type="Sprite2D" parent="."]
-position = Vector2(949, 536)
-scale = Vector2(1.06154, 1.73913)
-texture = ExtResource("3_c2nvk")
+[node name="Cooltext480058631182469" type="Sprite2D" parent="."]
+position = Vector2(952, 544)
+scale = Vector2(1.0257, 1.12319)
+texture = ExtResource("4_c2nvk")
 
 [connection signal="pressed" from="START" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="INFO" to="." method="_on_info_pressed"]
