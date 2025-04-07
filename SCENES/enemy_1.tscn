@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ci81jdjsjftsn"]
 
 [ext_resource type="Texture2D" uid="uid://cbgqrmbcdk0x7" path="res://NEOI_PAIXTES/enemy_1.png" id="1_mbxyh"]
-[ext_resource type="Script" uid="uid://ddmlk2kddmqtl" path="res://enemy_1.gd" id="1_pjquw"]
+[ext_resource type="Script" uid="uid://ddmlk2kddmqtl" path="res://gd_rd/enemy_1.gd" id="1_pjquw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pjquw"]
 radius = 51.0

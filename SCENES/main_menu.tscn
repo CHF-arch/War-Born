@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://c5e05fgq13623"]
 
-[ext_resource type="Script" uid="uid://davfqrl1pp06r" path="res://main_menu.gd" id="1_1hj21"]
+[ext_resource type="Script" uid="uid://davfqrl1pp06r" path="res://gd_rd/main_menu.gd" id="1_1hj21"]
 [ext_resource type="Texture2D" uid="uid://bx5l8j5ynccb8" path="res://main_menu/25188.png" id="2_1hj21"]
 [ext_resource type="Theme" uid="uid://dvvkfn8xhja4p" path="res://buttons/start_button.tres" id="3_68vjf"]
 [ext_resource type="Texture2D" uid="uid://c30eeqsxaljbw" path="res://main_menu/cooltext480058631182469.png" id="4_c2nvk"]
@@ -9,7 +9,7 @@
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_1hj21")
-metadata/_edit_vertical_guides_ = [1051.0, 857.0]
+metadata/_edit_vertical_guides_ = [1057.0, 847.0]
 
 [node name="25188" type="Sprite2D" parent="."]
 position = Vector2(952, 538.5)
@@ -17,32 +17,29 @@ scale = Vector2(0.325946, 0.283179)
 texture = ExtResource("2_1hj21")
 
 [node name="START" type="Button" parent="."]
-texture_filter = 1
-offset_left = 859.0
-offset_top = 784.0
-offset_right = 1059.0
-offset_bottom = 867.0
+offset_left = 845.0
+offset_top = 897.0
+offset_right = 1054.0
+offset_bottom = 1001.0
 pivot_offset = Vector2(164, 115)
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme = ExtResource("3_68vjf")
 
 [node name="INFO" type="Button" parent="."]
-texture_filter = 1
-offset_left = 858.0
-offset_top = 887.0
-offset_right = 1059.0
-offset_bottom = 966.0
+offset_left = 476.0
+offset_top = 897.0
+offset_right = 684.0
+offset_bottom = 999.0
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme = ExtResource("4_cek1n")
 
 [node name="EXIT" type="Button" parent="."]
-texture_filter = 1
-offset_left = 859.0
-offset_top = 987.0
-offset_right = 1061.0
-offset_bottom = 1066.0
+offset_left = 1220.0
+offset_top = 898.0
+offset_right = 1429.0
+offset_bottom = 999.0
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme = ExtResource("5_cek1n")
