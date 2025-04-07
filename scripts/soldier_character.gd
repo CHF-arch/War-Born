@@ -9,6 +9,10 @@ var bullet = preload("res://SCENES/bullet.tscn")
 var fire_rate = 5.0  
 var time_since_last_shot = 0.0
 
+# Player.gd
+func _ready():
+	add_to_group("player")  # Προσθήκη στην ομάδα "player"
+
 func _physics_process(delta: float) -> void:
 	var input_dir = Input.get_vector("left", "right", "up", "down")
 	velocity = input_dir.normalized() * movespeed
