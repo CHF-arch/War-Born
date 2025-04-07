@@ -11,11 +11,11 @@ size = Vector2(28, 8)
 [node name="Bullet" type="RigidBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-17, -1)
+position = Vector2(25, 22)
 shape = SubResource("RectangleShape2D_ss01b")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-6, -10)
+position = Vector2(36, 13)
 rotation = 1.5708
 scale = Vector2(0.8, 0.980769)
 texture = ExtResource("1_ss01b")
@@ -23,5 +23,5 @@ texture = ExtResource("1_ss01b")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-17, -1)
+position = Vector2(25, 22)
 shape = SubResource("RectangleShape2D_oqteu")
