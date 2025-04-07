@@ -1,11 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://3j8x23l2fejd"]
+[gd_scene load_steps=3 format=3 uid="uid://3j8x23l2fejd"]
 
-[ext_resource type="Texture2D" uid="uid://thget46rrgqo" path="res://main_menu/934042.png" id="1_y4vuv"]
+[ext_resource type="Texture2D" uid="uid://bx5l8j5ynccb8" path="res://main_menu/25188.png" id="1_bywi5"]
+[ext_resource type="Texture2D" uid="uid://d0y2qy8qdcptv" path="res://main_menu/Cool Text - WAR BORN 479745927731106.png" id="2_8q30p"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1920.0
-offset_bottom = 1080.0
-texture = ExtResource("1_y4vuv")
-expand_mode = 1
+[node name="25188" type="Sprite2D" parent="."]
+position = Vector2(961, 542)
+scale = Vector2(0.323613, 0.276431)
+texture = ExtResource("1_bywi5")
+
+[node name="CoolText-WarBorn479745927731106" type="Sprite2D" parent="."]
+position = Vector2(959, 545)
+scale = Vector2(1.00077, 1.5)
+texture = ExtResource("2_8q30p")

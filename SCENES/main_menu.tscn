@@ -1,35 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://c5e05fgq13623"]
 
 [ext_resource type="Script" uid="uid://davfqrl1pp06r" path="res://main_menu.gd" id="1_1hj21"]
-[ext_resource type="Texture2D" uid="uid://thget46rrgqo" path="res://main_menu/934042.png" id="2_1hj21"]
+[ext_resource type="Texture2D" uid="uid://bx5l8j5ynccb8" path="res://main_menu/25188.png" id="2_1hj21"]
 [ext_resource type="Texture2D" uid="uid://d0y2qy8qdcptv" path="res://main_menu/Cool Text - WAR BORN 479745927731106.png" id="3_c2nvk"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_1hj21")
 metadata/_edit_vertical_guides_ = [1051.0, 857.0]
 
-[node name="TextureRect2" type="TextureRect" parent="."]
-texture_filter = 6
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_right = 1920.0
-offset_bottom = 1080.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="25188" type="Sprite2D" parent="."]
+position = Vector2(952, 538.5)
+scale = Vector2(0.325946, 0.283179)
 texture = ExtResource("2_1hj21")
-expand_mode = 1
-
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 626.0
-offset_top = 212.0
-offset_right = 1276.0
-offset_bottom = 304.0
-size_flags_horizontal = 8
-texture = ExtResource("3_c2nvk")
-metadata/_edit_use_anchors_ = true
 
 [node name="START" type="Button" parent="."]
 texture_filter = 1
@@ -56,8 +38,13 @@ offset_right = 1051.0
 offset_bottom = 1060.0
 text = "EXIT"
 
+[node name="CoolText-WarBorn479745927731106" type="Sprite2D" parent="."]
+position = Vector2(949, 536)
+scale = Vector2(1.06154, 1.73913)
+texture = ExtResource("3_c2nvk")
+
 [connection signal="pressed" from="START" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="INFO" to="." method="_on_info_pressed"]
 [connection signal="pressed" from="INFO" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="EXIT" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="EXIT" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="EXIT" to="." method="_on_exit_pressed"]
