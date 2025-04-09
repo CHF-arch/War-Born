@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var movespeed = 1000
-@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+#@onready var animated_sprite_2d: $Sprite2D = $Sprite2D
 var bullet_speed = 3000
 var bullet = preload("res://SCENES/bullet.tscn")
 
@@ -38,4 +38,4 @@ func fire():
 	bullet_instance.apply_impulse(direction * bullet_speed)
 	
 	get_tree().root.add_child(bullet_instance)
-	print("Bullet at: ", bullet_instance.global_position, " | Player at: ", global_position)
+	#print("Bullet at: ", bullet_instance.global_position, " | Player at: ", global_position)

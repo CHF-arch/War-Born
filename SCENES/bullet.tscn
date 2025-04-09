@@ -1,18 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://chubm8ke2xmk7"]
 
+[ext_resource type="Script" uid="uid://bmlolupruv42x" path="res://gd_rd/bullet.gd" id="1_oqteu"]
 [ext_resource type="Texture2D" uid="uid://bqxtbiimelme8" path="res://Bullet/bullet.png" id="1_ss01b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ss01b"]
-size = Vector2(28, 8)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oqteu"]
-size = Vector2(28, 8)
+size = Vector2(31, 9)
 
 [node name="Bullet" type="RigidBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(97, 22)
-shape = SubResource("RectangleShape2D_ss01b")
+collision_layer = 5
+collision_mask = 2
+script = ExtResource("1_oqteu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(107, 13)
@@ -20,8 +17,6 @@ rotation = 1.5708
 scale = Vector2(0.8, 0.980769)
 texture = ExtResource("1_ss01b")
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(96, 22)
-shape = SubResource("RectangleShape2D_oqteu")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(96.5, 22.5)
+shape = SubResource("RectangleShape2D_ss01b")
