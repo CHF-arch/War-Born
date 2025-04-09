@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://3j8x23l2fejd"]
+[gd_scene load_steps=12 format=3 uid="uid://3j8x23l2fejd"]
 
 [ext_resource type="Texture2D" uid="uid://bx5l8j5ynccb8" path="res://main_menu/25188.png" id="1_bywi5"]
 [ext_resource type="Script" uid="uid://7i2ebg5igojw" path="res://gd_rd/infomenu.gd" id="1_w15kw"]
@@ -6,12 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://dchiobpwouw0r" path="res://info_menu/ui2.png" id="3_8q30p"]
 [ext_resource type="Texture2D" uid="uid://bl10nvgpc6dgc" path="res://info_menu/ui1.png" id="4_w15kw"]
 [ext_resource type="Texture2D" uid="uid://dap5ihlf40qbc" path="res://info_menu/soldrier.png" id="6_lasws"]
+[ext_resource type="FontFile" uid="uid://dqiwaltnyashr" path="res://info_menu/Good Times Rg.otf" id="8_0fhuo"]
 [ext_resource type="Texture2D" uid="uid://buftix33atlk7" path="res://info_menu/ui6.png" id="9_oqbmf"]
+[ext_resource type="AudioStream" uid="uid://1jfjspvlgeb2" path="res://buttons/mixkit-handgun-click-1660.mp3" id="9_w15kw"]
 [ext_resource type="Theme" uid="uid://borsf41at585l" path="res://buttons/exit_button.tres" id="10_0fhuo"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_k6qye"]
 
-[node name="ui" type="Node2D"]
+[node name="Node2D" type="Node2D"]
 script = ExtResource("1_w15kw")
 metadata/_edit_vertical_guides_ = [937.0, 958.0]
 
@@ -49,6 +51,13 @@ position = Vector2(282.25, 453)
 scale = Vector2(0.887778, 0.782222)
 texture = ExtResource("6_lasws")
 
+[node name="Ui7" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+position = Vector2(431, 266)
+scale = Vector2(1.44286, 1.41489)
+texture = ExtResource("9_oqbmf")
+
 [node name="Ui6" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(429, 264)
@@ -57,32 +66,132 @@ texture = ExtResource("9_oqbmf")
 
 [node name="labels" type="Node" parent="."]
 
-[node name="controls_Label" type="Label" parent="labels"]
-offset_left = 1488.0
-offset_top = 253.0
-offset_right = 1842.0
-offset_bottom = 281.0
-text = "CONTROLS"
+[node name="controls_Label4" type="Label" parent="labels"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 1485.0
+offset_top = 250.0
+offset_right = 1728.0
+offset_bottom = 271.0
+scale = Vector2(1.5, 1.5)
+theme_override_fonts/font = ExtResource("8_0fhuo")
+text = "KEYBINDS"
 label_settings = SubResource("LabelSettings_k6qye")
 horizontal_alignment = 1
 
-[node name="info_Label" type="Label" parent="labels"]
-modulate = Color(0.0901961, 0.101961, 0.0745098, 1)
-offset_left = 108.0
-offset_top = 252.0
-offset_right = 456.0
-offset_bottom = 278.0
-size_flags_horizontal = 4
-text = " INFO"
+[node name="controls_Label" type="Label" parent="labels"]
+offset_left = 1483.0
+offset_top = 247.0
+offset_right = 1726.0
+offset_bottom = 268.0
+scale = Vector2(1.5, 1.5)
+theme_override_fonts/font = ExtResource("8_0fhuo")
+text = "KEYBINDS"
+label_settings = SubResource("LabelSettings_k6qye")
 horizontal_alignment = 1
 
-[node name="Label" type="Label" parent="labels"]
-offset_left = 519.0
-offset_top = 773.0
-offset_right = 1377.0
-offset_bottom = 798.0
-text = "HOW TO PLAY"
+[node name="controls_Label3" type="Label" parent="labels"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 1505.0
+offset_top = 304.0
+offset_right = 1748.0
+offset_bottom = 422.0
+scale = Vector2(1.5, 1.5)
+theme_override_fonts/font = ExtResource("8_0fhuo")
+text = "FORWARD = W
+BACKWARD = S
+LEFT = A
+RIGHT = D
+SHOOT = LEFT CLICK"
+label_settings = SubResource("LabelSettings_k6qye")
+
+[node name="controls_Label2" type="Label" parent="labels"]
+offset_left = 1502.0
+offset_top = 301.0
+offset_right = 1745.0
+offset_bottom = 419.0
+scale = Vector2(1.5, 1.5)
+theme_override_fonts/font = ExtResource("8_0fhuo")
+text = "FORWARD = W
+BACKWARD = S
+LEFT = A
+RIGHT = D
+SHOOT = LEFT CLICK"
+label_settings = SubResource("LabelSettings_k6qye")
+
+[node name="info_label2" type="Label" parent="labels"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 101.0
+offset_top = 250.0
+offset_right = 344.0
+offset_bottom = 271.0
+scale = Vector2(1.5, 1.5)
+theme_override_fonts/font = ExtResource("8_0fhuo")
+text = "YOURSELF"
+label_settings = SubResource("LabelSettings_k6qye")
 horizontal_alignment = 1
+
+[node name="info_label" type="Label" parent="labels"]
+offset_left = 98.0
+offset_top = 248.0
+offset_right = 341.0
+offset_bottom = 269.0
+scale = Vector2(1.5, 1.5)
+theme_override_fonts/font = ExtResource("8_0fhuo")
+text = "YOURSELF"
+label_settings = SubResource("LabelSettings_k6qye")
+horizontal_alignment = 1
+
+[node name="playthrough_label2" type="Label" parent="labels"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 512.0
+offset_top = 772.0
+offset_right = 1092.0
+offset_bottom = 793.0
+scale = Vector2(1.5, 1.5)
+theme_override_fonts/font = ExtResource("8_0fhuo")
+text = "PLAYTHROUGH"
+label_settings = SubResource("LabelSettings_k6qye")
+horizontal_alignment = 1
+
+[node name="playthrough_label" type="Label" parent="labels"]
+offset_left = 508.0
+offset_top = 770.0
+offset_right = 1088.0
+offset_bottom = 791.0
+scale = Vector2(1.5, 1.5)
+theme_override_fonts/font = ExtResource("8_0fhuo")
+text = "PLAYTHROUGH"
+label_settings = SubResource("LabelSettings_k6qye")
+horizontal_alignment = 1
+
+[node name="playthrough_label4" type="Label" parent="labels"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 528.0
+offset_top = 806.0
+offset_right = 1092.0
+offset_bottom = 953.0
+scale = Vector2(1.5, 1.5)
+theme_override_fonts/font = ExtResource("8_0fhuo")
+text = "Survive the waves of enemies to obtain the 
+security card and enter the guarded building
+ to save your brother"
+label_settings = SubResource("LabelSettings_k6qye")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="playthrough_label3" type="Label" parent="labels"]
+offset_left = 525.0
+offset_top = 803.0
+offset_right = 1089.0
+offset_bottom = 950.0
+scale = Vector2(1.5, 1.5)
+theme_override_fonts/font = ExtResource("8_0fhuo")
+text = "Survive the waves of enemies to obtain the 
+security card and enter the guarded building
+ to save your brother"
+label_settings = SubResource("LabelSettings_k6qye")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="back" type="Button" parent="."]
 offset_left = 886.0
@@ -93,12 +202,9 @@ size_flags_horizontal = 4
 size_flags_vertical = 0
 theme = ExtResource("10_0fhuo")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 529.0
-offset_top = 808.0
-offset_right = 1154.0
-offset_bottom = 1028.0
-bbcode_enabled = true
-text = "[b]TESt[/b]"
+[node name="hover" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-22, -59)
+stream = ExtResource("9_w15kw")
 
+[connection signal="mouse_entered" from="back" to="." method="_on_back_mouse_entered"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
