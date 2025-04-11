@@ -7093,4 +7093,3 @@ tile_set = SubResource("TileSet_ya7hs")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_ddfq8")]
 position = Vector2(2547, 310)
-scale = Vector2(0.5, 0.5)
