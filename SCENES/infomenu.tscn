@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://3j8x23l2fejd"]
 
 [ext_resource type="Texture2D" uid="uid://bx5l8j5ynccb8" path="res://main_menu/25188.png" id="1_bywi5"]
-[ext_resource type="Script" uid="uid://7i2ebg5igojw" path="res://gd_rd/infomenu.gd" id="1_w15kw"]
+[ext_resource type="Script" uid="uid://7i2ebg5igojw" path="res://scripts/infomenu.gd" id="1_w15kw"]
 [ext_resource type="Texture2D" uid="uid://c30eeqsxaljbw" path="res://main_menu/cooltext480058631182469.png" id="2_bywi5"]
 [ext_resource type="Texture2D" uid="uid://dchiobpwouw0r" path="res://info_menu/ui2.png" id="3_8q30p"]
 [ext_resource type="Texture2D" uid="uid://bl10nvgpc6dgc" path="res://info_menu/ui1.png" id="4_w15kw"]
@@ -101,6 +101,7 @@ text = "FORWARD = W
 BACKWARD = S
 LEFT = A
 RIGHT = D
+INTERACTION = F
 SHOOT = LEFT CLICK"
 label_settings = SubResource("LabelSettings_k6qye")
 
@@ -115,7 +116,9 @@ text = "FORWARD = W
 BACKWARD = S
 LEFT = A
 RIGHT = D
-SHOOT = LEFT CLICK"
+INTERACTION = F
+SHOOT = LEFT CLICK
+"
 label_settings = SubResource("LabelSettings_k6qye")
 
 [node name="info_label2" type="Label" parent="labels"]

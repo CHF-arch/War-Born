@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3qbkl5hxdyhc"]
+
+[ext_resource type="Script" uid="uid://y5n64i4ycmit" path="res://scripts/audio_manager.gd" id="1_bq1v2"]
+[ext_resource type="AudioStream" uid="uid://dyprkt7o0fynp" path="res://main_menu/xronis_intro.wav" id="2_6jj5d"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_bq1v2")
+
+[node name="XronisIntro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_6jj5d")
+pitch_scale = 0.95
+autoplay = true

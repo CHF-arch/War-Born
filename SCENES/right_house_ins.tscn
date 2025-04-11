@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=4 uid="uid://1yksa4r0qhce"]
+[gd_scene load_steps=10 format=4 uid="uid://1yksa4r0qhce"]
 
 [ext_resource type="Texture2D" uid="uid://u1srewt4edkp" path="res://MAP/SMS Military Base Files/SMS_RPG_Military_Barracks_Sheet.png" id="1_rhhoj"]
 [ext_resource type="PackedScene" uid="uid://bnwot7glcp2c0" path="res://SCENES/soldier_character.tscn" id="2_xm3iu"]
+[ext_resource type="Script" uid="uid://7ixhtjl2drjg" path="res://scripts/porta_dejia_spiti.gd" id="3_xm3iu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rhhoj"]
 size = Vector2(29.2046, 33.6414)
@@ -234,6 +235,9 @@ texture = ExtResource("1_rhhoj")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_q153n")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bpyta"]
+size = Vector2(140, 86)
+
 [node name="Node2D" type="Node2D"]
 metadata/_edit_vertical_guides_ = [1269.0]
 
@@ -348,4 +352,15 @@ tile_map_data = PackedByteArray("AAADAAAAAAAKAAQAABADAAEAAAAKAAQAABADAAIAAAAKAAQ
 tile_set = SubResource("TileSet_wjqg3")
 
 [node name="player" parent="." instance=ExtResource("2_xm3iu")]
-position = Vector2(1762, -86)
+position = Vector2(2533, -439)
+
+[node name="porta_dejia_spiti" type="Area2D" parent="."]
+position = Vector2(2511, -527)
+script = ExtResource("3_xm3iu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="porta_dejia_spiti"]
+position = Vector2(-6, -2)
+shape = SubResource("RectangleShape2D_bpyta")
+
+[connection signal="body_entered" from="porta_dejia_spiti" to="porta_dejia_spiti" method="_on_body_entered"]
+[connection signal="body_exited" from="porta_dejia_spiti" to="porta_dejia_spiti" method="_on_body_exited"]

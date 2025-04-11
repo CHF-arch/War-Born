@@ -7092,4 +7092,4 @@ tile_map_data = PackedByteArray("AAArAPj/AQAEABEAAAAsAPj/AQAFABEAAAArAPX/AQAUABI
 tile_set = SubResource("TileSet_ya7hs")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_ddfq8")]
-position = Vector2(2547, 310)
+position = Vector2(-416, 505)
