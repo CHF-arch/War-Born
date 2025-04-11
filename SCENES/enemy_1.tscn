@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://ci81jdjsjftsn"]
+[gd_scene load_steps=5 format=3 uid="uid://ci81jdjsjftsn"]
 
 [ext_resource type="Texture2D" uid="uid://cbgqrmbcdk0x7" path="res://NEOI_PAIXTES/enemy_1.png" id="1_mbxyh"]
 [ext_resource type="Script" uid="uid://ddmlk2kddmqtl" path="res://scripts/enemy_1.gd" id="1_pjquw"]
@@ -7,9 +7,12 @@
 radius = 51.0
 height = 106.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ln7f7"]
+radius = 57.0588
+height = 114.118
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 scale = Vector2(1.7, 1.7)
-collision_layer = 3
 script = ExtResource("1_pjquw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -21,3 +24,10 @@ texture = ExtResource("1_mbxyh")
 shape = SubResource("CapsuleShape2D_pjquw")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_ln7f7")

@@ -12,6 +12,7 @@ var health := 2
 func _ready():
 	player = get_tree().get_nodes_in_group("player")[0]
 	add_to_group("enemies")
+	$Area2D.body_entered.connect(_on_body_entered)
 
 func _physics_process(delta):
 	if not player:
@@ -56,7 +57,7 @@ func die():
 	
 
 func _on_body_entered(body: Node):
-	print("Enemy collided with:", body.name)  # Debug
-	if body.is_in_group("bullets"):  # Αν η σφαίρα είναι σε group "bullets"
-		body.queue_free()  # Διαγραφή σφαίρας
-		take_damage(body.damage)  # Περνάμε τη ζημιά
+	#print("Enemy collided with:", body.name)
+	if body.is_in_group("bullets"):
+		body.queue_free()
+		take_damage(body.damage)

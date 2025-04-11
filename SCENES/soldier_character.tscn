@@ -19,7 +19,7 @@ scale = Vector2(3.5, 3.5)
 texture = ExtResource("2_ebx12")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.5, 0.5)
+zoom = Vector2(0.1, 0.1)
 rotation_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

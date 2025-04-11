@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://cnadvcsp4vvuc"]
+[gd_scene load_steps=19 format=4 uid="uid://cnadvcsp4vvuc"]
 
 [ext_resource type="Texture2D" uid="uid://byk5ie8y1nluy" path="res://MAP/SMS Military Base Files/SMS Military Base Full Sheet.png" id="1_2rhms"]
 [ext_resource type="Script" uid="uid://dj3odbqouj8w3" path="res://scripts/map_desing.gd" id="1_gbx3p"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b4ndkbjie3x3s" path="res://MAP/obj_bags2.png" id="8_3hqu3"]
 [ext_resource type="Texture2D" uid="uid://g8ad1uc1xhhy" path="res://MAP/obj_barrels.png" id="9_gbx3p"]
 [ext_resource type="PackedScene" uid="uid://bnwot7glcp2c0" path="res://SCENES/soldier_character.tscn" id="10_51dy3"]
+[ext_resource type="PackedScene" uid="uid://ci81jdjsjftsn" path="res://SCENES/enemy_1.tscn" id="11_2fnw0"]
 [ext_resource type="Script" uid="uid://du5jblkj0h1cg" path="res://scripts/spawn.gd" id="12_o7kj4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2fnw0"]
@@ -4246,6 +4247,9 @@ shape = SubResource("RectangleShape2D_ky481")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("10_51dy3")]
 position = Vector2(3064, 3008)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("11_2fnw0")]
+position = Vector2(2478, 2397)
 
 [node name="Spawn" type="Node2D" parent="."]
 script = ExtResource("12_o7kj4")
