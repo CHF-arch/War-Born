@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=4 uid="uid://cnadvcsp4vvuc"]
+[gd_scene load_steps=18 format=4 uid="uid://cnadvcsp4vvuc"]
 
 [ext_resource type="Texture2D" uid="uid://byk5ie8y1nluy" path="res://MAP/SMS Military Base Files/SMS Military Base Full Sheet.png" id="1_2rhms"]
+[ext_resource type="Script" uid="uid://dj3odbqouj8w3" path="res://scripts/map_desing.gd" id="1_gbx3p"]
 [ext_resource type="Texture2D" uid="uid://djtg3esg6qusp" path="res://MAP/KV-1/ww2_top_view_hull5.png" id="2_sdxd1"]
 [ext_resource type="Texture2D" uid="uid://bk6aqmlovxjad" path="res://MAP/KV-1/ww2_top_view_turret5.png" id="3_1tk5x"]
 [ext_resource type="Texture2D" uid="uid://cv4jilx6jnp3d" path="res://MAP/JU87B2 -progress_4.png" id="4_1tk5x"]
@@ -8,8 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://blmbguayhyeeb" path="res://MAP/obj_bags1.png" id="7_pokaj"]
 [ext_resource type="Texture2D" uid="uid://b4ndkbjie3x3s" path="res://MAP/obj_bags2.png" id="8_3hqu3"]
 [ext_resource type="Texture2D" uid="uid://g8ad1uc1xhhy" path="res://MAP/obj_barrels.png" id="9_gbx3p"]
+[ext_resource type="PackedScene" uid="uid://bnwot7glcp2c0" path="res://SCENES/soldier_character.tscn" id="10_51dy3"]
+[ext_resource type="PackedScene" uid="uid://ci81jdjsjftsn" path="res://SCENES/enemy_1.tscn" id="11_2fnw0"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eff1j"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2fnw0"]
 texture = ExtResource("1_2rhms")
 0:0/0 = 0
 1:0/0 = 0
@@ -4117,7 +4120,7 @@ texture = ExtResource("1_2rhms")
 
 [sub_resource type="TileSet" id="TileSet_cwc5l"]
 physics_layer_0/collision_layer = 1
-sources/1 = SubResource("TileSetAtlasSource_eff1j")
+sources/1 = SubResource("TileSetAtlasSource_2fnw0")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6cvue"]
 size = Vector2(25.9218, 44.9545)
@@ -4128,7 +4131,11 @@ size = Vector2(570, 306)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gbx3p"]
 size = Vector2(219.333, 85.3334)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ky481"]
+size = Vector2(26.7271, 1.22309)
+
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_gbx3p")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1
@@ -4228,3 +4235,20 @@ texture = ExtResource("9_gbx3p")
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="barrel"]
 position = Vector2(19, -12)
 polygon = PackedVector2Array(39.7, -88, 7.5, -88, 0.599998, -85, -1.8, -85, -13.8, -73, -15.3, -73, -25, -49.4, -25, -41, -27.1, -41, -41, -57.7, -41, -60, -57.6, -60, -70.5, -51, -72.9, -51, -89.9, -33, -91.2, -33, -103, -12.2, -103, 7.5, -97.7, 12, -95.6, 12, -97.5, 19, -100, 19, -97, 26.4, -97, 29.2, -86.5, 35, -85.1, 35, -79, 44.6, -79, 47.2, -70.5, 52, -68.1, 52, -61, 62.6, -61, 65.2, -51.5, 70, -50.1, 70, -44, 79.6, -44, 82.1, -39, 85.1, -39, 87, -28.5, 87, -19.5, 82, -17.2, 82, 15.9, 52, 18.5, 52, 33.4, 61, 45.5, 61, 72.5, 48, 92, 48, 102, 34.7, 102, 32.5, 97.2, 23, 98, 14.1, 98, 8.8, 91, -19, 91, -24.1, 83, -29.2, 83, -31.8, 68.7, -27.1, 71, -33.7, 71, -53.5, 64, -67.5, 64, -69.9, 51, -82, 51, -83.3)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(3560, 328)
+scale = Vector2(3.36737, -13.5092)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1.97887e-05, 4.5076e-07)
+shape = SubResource("RectangleShape2D_ky481")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("10_51dy3")]
+position = Vector2(3064, 3008)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("11_2fnw0")]
+position = Vector2(2478, 2397)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

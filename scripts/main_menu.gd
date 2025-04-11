@@ -3,7 +3,7 @@ extends Node2D
 
 func _on_start_pressed() -> void:
 	$click.play()
-	get_tree().change_scene_to_file("res://SCENES/game.tscn")
+	get_tree().change_scene_to_file("res://SCENES/LEVEL1.tscn")
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()
