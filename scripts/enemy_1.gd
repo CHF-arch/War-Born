@@ -10,6 +10,8 @@ var shoot_cooldown: float = 1.0
 var health := 2
 
 func _ready():
+	await get_tree().process_frame
+	add_to_group("player")
 	player = get_tree().get_nodes_in_group("player")[0]
 	add_to_group("enemies")
 	$Area2D.body_entered.connect(_on_body_entered)
@@ -61,3 +63,5 @@ func _on_body_entered(body: Node):
 	if body.is_in_group("bullets"):
 		body.queue_free()
 		take_damage(body.damage)
+		
+		
