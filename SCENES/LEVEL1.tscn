@@ -4146,7 +4146,6 @@ tile_set = SubResource("TileSet_cwc5l")
 
 [node name="Spawn" parent="." instance=ExtResource("11_2fnw0")]
 position = Vector2(3224, 2271)
-scale = Vector2(1, 1)
 
 [node name="tank" type="CharacterBody2D" parent="."]
 position = Vector2(1673, 2160)
