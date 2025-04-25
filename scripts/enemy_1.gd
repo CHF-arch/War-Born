@@ -11,7 +11,6 @@ var shoot_cooldown: float = 1.0
 var health := 2
 
 func _ready():
-	#add_to_group("player")
 	add_to_group("enemies")
 	await get_tree().process_frame
 	player = get_tree().get_nodes_in_group("player")[0]
@@ -43,25 +42,16 @@ func shoot():
 	await get_tree().create_timer(shoot_cooldown).timeout
 	if bullet_scene and is_instance_valid(player):
 		var bullet = bullet_scene.instantiate()
-		var spawn_pos = global_position + Vector2(50, 0).rotated(rotation)
 		bullet.global_position = $Muzzle.global_position
-		bullet.direction = Vector2.RIGHT.rotated(rotation)
+		
+		bullet.look_at(player.global_position)
 		var direction = Vector2.RIGHT.rotated(global_rotation) + (player.global_position - global_position).normalized()
 		bullet.apply_impulse(direction * bullet_speed)
+		
 		get_parent().add_child(bullet)
 		bullet.modulate = Color.RED
-		print("Bullet spawned! Pos: ", bullet.global_position, " Dir: ", bullet.direction)
-	
-	#if bullet_scene and is_instance_valid(player) and has_node("GunPosition"):
+		print("Bullet spawned! Pos: ", bullet.global_position, " Dir: ", direction)
 		
-		#var bullet = bullet_scene.instantiate()
-		#bullet.modulate = Color.RED
-		#bullet.global_position = $GunPosition.global_position
-		#bullet.direction = (player.global_position - global_position).normalized()
-		#var direction = Vector2.RIGHT.rotated(global_rotation)
-		#bullet.apply_impulse(direction * bullet_speed)
-		#get_tree().current_scene.add_child(bullet)
-		#print("Bullet spawned at: ", bullet.global_position)
 
 func take_damage(damage_amount: int) -> void:
 	health -= damage_amount

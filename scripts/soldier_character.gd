@@ -27,9 +27,7 @@ func _physics_process(delta: float) -> void:
 func fire():
 	var bullet_instance = bullet.instantiate()
 	bullet_instance.damage = 1
-	
-	var muzzle_offset = Vector2(50, 0).rotated(global_rotation)
-	bullet_instance.global_position = global_position + muzzle_offset
+	bullet_instance.global_position = global_position
 	
 	bullet_instance.global_rotation = global_rotation
 	var direction = Vector2.RIGHT.rotated(global_rotation)
@@ -46,7 +44,7 @@ func take_damage(damage_amount: int) -> void:
 func die():
 	queue_free()
 	
-func _on_body_entered(body: Node):
+func _on_body_entered(body):
 	#print("Enemy collided with:", body.name)
 	if body.is_in_group("enemy_bullets"):
 		body.queue_free()

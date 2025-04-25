@@ -13,6 +13,8 @@ height = 114.118
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 scale = Vector2(1.7, 1.7)
+collision_layer = 4
+collision_mask = 5
 script = ExtResource("1_pjquw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -25,12 +27,11 @@ shape = SubResource("CapsuleShape2D_pjquw")
 
 [node name="Muzzle" type="Marker2D" parent="."]
 position = Vector2(64.7059, 11.1765)
-scale = Vector2(1, 1)
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(0.588242, -3.8147e-06)
-collision_layer = 3
-collision_mask = 5
+collision_layer = 2
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-0.588242, 4.76837e-06)
