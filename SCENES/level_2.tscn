@@ -1,7 +1,8 @@
-[gd_scene load_steps=18 format=4 uid="uid://b4dgk01wmrg6t"]
+[gd_scene load_steps=19 format=4 uid="uid://b4dgk01wmrg6t"]
 
 [ext_resource type="Script" uid="uid://3kk4m45557kp" path="res://scripts/level_2.gd" id="1_7mobf"]
 [ext_resource type="Texture2D" uid="uid://byk5ie8y1nluy" path="res://MAP/SMS Military Base Files/SMS Military Base Full Sheet.png" id="2_6boms"]
+[ext_resource type="PackedScene" uid="uid://dfsjyn6ia66c5" path="res://SCENES/spawn.tscn" id="2_boh22"]
 [ext_resource type="Texture2D" uid="uid://djtg3esg6qusp" path="res://MAP/KV-1/ww2_top_view_hull5.png" id="3_boh22"]
 [ext_resource type="Texture2D" uid="uid://bk6aqmlovxjad" path="res://MAP/KV-1/ww2_top_view_turret5.png" id="4_1h1ed"]
 [ext_resource type="Texture2D" uid="uid://cv4jilx6jnp3d" path="res://MAP/JU87B2 -progress_4.png" id="5_5wgn3"]
@@ -4138,6 +4139,18 @@ size = Vector2(93, 25)
 
 [node name="LEVEL2" type="Node2D"]
 script = ExtResource("1_7mobf")
+
+[node name="Spawn" parent="." instance=ExtResource("2_boh22")]
+position = Vector2(-533, 2575)
+
+[node name="Spawn2" parent="." instance=ExtResource("2_boh22")]
+position = Vector2(-59, 459)
+
+[node name="Spawn3" parent="." instance=ExtResource("2_boh22")]
+position = Vector2(2457, 1184)
+
+[node name="Spawn4" parent="." instance=ExtResource("2_boh22")]
+position = Vector2(1567, -331)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1

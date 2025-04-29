@@ -1,9 +1,10 @@
-[gd_scene load_steps=19 format=4 uid="uid://btgw6hkp8hiq0"]
+[gd_scene load_steps=20 format=4 uid="uid://btgw6hkp8hiq0"]
 
 [ext_resource type="Texture2D" uid="uid://bnc2v754s28uh" path="res://MAP/SMS Military Base Files/top_right_building.png" id="1_sys84"]
 [ext_resource type="Texture2D" uid="uid://byk5ie8y1nluy" path="res://MAP/SMS Military Base Files/SMS Military Base Full Sheet.png" id="2_rr2ir"]
 [ext_resource type="PackedScene" uid="uid://bnwot7glcp2c0" path="res://SCENES/soldier_character.tscn" id="3_ddfq8"]
 [ext_resource type="Texture2D" uid="uid://ccnn5ldn30u6y" path="res://top_left_build/InteriorTilesLITE.png" id="4_rr2ir"]
+[ext_resource type="PackedScene" uid="uid://dfsjyn6ia66c5" path="res://SCENES/spawn.tscn" id="5_ddfq8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_leouu"]
 texture = ExtResource("1_sys84")
@@ -7093,3 +7094,6 @@ tile_set = SubResource("TileSet_ya7hs")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_ddfq8")]
 position = Vector2(-416, 505)
+
+[node name="Spawn" parent="." instance=ExtResource("5_ddfq8")]
+position = Vector2(2650, -1064)

@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://ddmlk2kddmqtl" path="res://scripts/enemy_1.gd" id="1_pjquw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pjquw"]
-radius = 51.0
-height = 106.0
+radius = 41.7647
+height = 83.5294
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ln7f7"]
 radius = 57.0588
