@@ -13,7 +13,8 @@ config_version=5
 config/name="Soldier_Game"
 run/main_scene="uid://c5e05fgq13623"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="uid://biim5q6wmlttx"
+boot_splash/show_image=false
+config/icon="res://gd_rd/icon.svg"
 
 [autoload]
 
