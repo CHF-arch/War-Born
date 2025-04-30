@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c5e05fgq13623"]
+[gd_scene load_steps=10 format=3 uid="uid://c5e05fgq13623"]
 
 [ext_resource type="Script" uid="uid://davfqrl1pp06r" path="res://scripts/main_menu.gd" id="1_1hj21"]
 [ext_resource type="Texture2D" uid="uid://bx5l8j5ynccb8" path="res://main_menu/25188.png" id="2_1hj21"]
@@ -8,6 +8,7 @@
 [ext_resource type="Theme" uid="uid://borsf41at585l" path="res://buttons/exit_button.tres" id="5_cek1n"]
 [ext_resource type="AudioStream" uid="uid://drs3lresptnfy" path="res://buttons/mixkit-game-gun-shot-1662.mp3" id="7_gb6oj"]
 [ext_resource type="AudioStream" uid="uid://1jfjspvlgeb2" path="res://buttons/mixkit-handgun-click-1660.mp3" id="8_7w3h0"]
+[ext_resource type="PackedScene" uid="uid://d3qbkl5hxdyhc" path="res://SCENES/audio_manager.tscn" id="9_7w3h0"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_1hj21")
@@ -59,12 +60,14 @@ stream = ExtResource("7_gb6oj")
 position = Vector2(845, 897)
 stream = ExtResource("8_7w3h0")
 
+[node name="AudioManager" parent="." instance=ExtResource("9_7w3h0")]
+
 [connection signal="focus_entered" from="START" to="." method="_on_start_focus_entered"]
 [connection signal="mouse_entered" from="START" to="." method="_on_start_mouse_entered"]
 [connection signal="pressed" from="START" to="." method="_on_start_pressed"]
 [connection signal="toggled" from="START" to="." method="_on_start_toggled"]
 [connection signal="mouse_entered" from="EXIT" to="." method="_on_exit_mouse_entered"]
-[connection signal="pressed" from="EXIT" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="EXIT" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="EXIT" to="." method="_on_exit_pressed"]
 [connection signal="mouse_entered" from="infooo" to="." method="_on_infooo_mouse_entered"]
 [connection signal="pressed" from="infooo" to="." method="_on_infooo_pressed"]
