@@ -6,7 +6,7 @@ var damage = 1 #test
 
 func _ready():
 	add_to_group("enemy_bullets")
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(0.6).timeout
 	queue_free()
 
 func _physics_process(delta):
