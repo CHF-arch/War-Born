@@ -64,7 +64,7 @@ stream = ExtResource("8_7w3h0")
 [connection signal="pressed" from="START" to="." method="_on_start_pressed"]
 [connection signal="toggled" from="START" to="." method="_on_start_toggled"]
 [connection signal="mouse_entered" from="EXIT" to="." method="_on_exit_mouse_entered"]
-[connection signal="pressed" from="EXIT" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="EXIT" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="EXIT" to="." method="_on_start_pressed"]
 [connection signal="mouse_entered" from="infooo" to="." method="_on_infooo_mouse_entered"]
 [connection signal="pressed" from="infooo" to="." method="_on_infooo_pressed"]

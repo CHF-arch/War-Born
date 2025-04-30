@@ -1,13 +1,13 @@
 extends CharacterBody2D
 
-@export var speed: float = 280
+@export var speed: float = 100.0
 @export var rotation_speed: float = 5.0
 @export var bullet_scene = preload("res://SCENES/enemy_bullet.tscn")  
 
-var bullet_speed = 1200
+var bullet_speed = 2000
 var player: Node2D  
 var can_shoot: bool = true
-var shoot_cooldown: float = 1.0
+var shoot_cooldown: float = 1.0  
 var health := 2
 
 func _ready():
