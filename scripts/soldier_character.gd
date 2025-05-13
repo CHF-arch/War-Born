@@ -8,6 +8,7 @@ var fire_rate = 5.0
 var time_since_last_shot = 0.0
 var health := 1
 #sdfsd
+#dsfsd
 func _ready():
 	add_to_group("player") 
 
