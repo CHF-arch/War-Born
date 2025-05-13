@@ -23,8 +23,12 @@ AudioManager="*res://SCENES/audio_manager.tscn"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+<<<<<<< HEAD
 mouse_cursor/custom_image="uid://dy7uufkb71of4"
 mouse_cursor/custom_image_hotspot=Vector2(16, 16)
+=======
+window/size/mode=3
+>>>>>>> 0eb066ba2e8efb9f8a3f9384d4711ad47cd728d5
 
 [input]
 
