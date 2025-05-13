@@ -1,9 +1,14 @@
-extends Node2D
+extends Area2D
 
 
-var entered = false
+var entered = false 
+
+func _on_body_entered(body: Node2D) -> void:
+	entered = true
 
 
+func _on_body_exited(body: Node2D) -> void:
+	entered = false
 
 
 func _process(delta):

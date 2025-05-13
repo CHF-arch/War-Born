@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://cnadvcsp4vvuc"]
+[gd_scene load_steps=19 format=4 uid="uid://cnadvcsp4vvuc"]
 
 [ext_resource type="Texture2D" uid="uid://byk5ie8y1nluy" path="res://MAP/SMS Military Base Files/SMS Military Base Full Sheet.png" id="1_2rhms"]
 [ext_resource type="Script" uid="uid://dj3odbqouj8w3" path="res://scripts/map_desing.gd" id="1_gbx3p"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://g8ad1uc1xhhy" path="res://MAP/obj_barrels.png" id="9_gbx3p"]
 [ext_resource type="PackedScene" uid="uid://bnwot7glcp2c0" path="res://SCENES/soldier_character.tscn" id="10_51dy3"]
 [ext_resource type="PackedScene" uid="uid://dfsjyn6ia66c5" path="res://SCENES/spawn.tscn" id="11_2fnw0"]
+[ext_resource type="Script" uid="uid://bkfc0kihbik6b" path="res://SCENES/area_2d1.gd" id="12_o7kj4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2fnw0"]
 texture = ExtResource("1_2rhms")
@@ -4131,8 +4132,8 @@ size = Vector2(570, 306)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gbx3p"]
 size = Vector2(219.333, 85.3334)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ky481"]
-size = Vector2(34.1512, 3.84923)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2fnw0"]
+size = Vector2(192, 118)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_gbx3p")
@@ -4236,14 +4237,6 @@ texture = ExtResource("9_gbx3p")
 position = Vector2(19, -12)
 polygon = PackedVector2Array(39.7, -88, 7.5, -88, 0.599998, -85, -1.8, -85, -13.8, -73, -15.3, -73, -25, -49.4, -25, -41, -27.1, -41, -41, -57.7, -41, -60, -57.6, -60, -70.5, -51, -72.9, -51, -89.9, -33, -91.2, -33, -103, -12.2, -103, 7.5, -97.7, 12, -95.6, 12, -97.5, 19, -100, 19, -97, 26.4, -97, 29.2, -86.5, 35, -85.1, 35, -79, 44.6, -79, 47.2, -70.5, 52, -68.1, 52, -61, 62.6, -61, 65.2, -51.5, 70, -50.1, 70, -44, 79.6, -44, 82.1, -39, 85.1, -39, 87, -28.5, 87, -19.5, 82, -17.2, 82, 15.9, 52, 18.5, 52, 33.4, 61, 45.5, 61, 72.5, 48, 92, 48, 102, 34.7, 102, 32.5, 97.2, 23, 98, 14.1, 98, 8.8, 91, -19, 91, -24.1, 83, -29.2, 83, -31.8, 68.7, -27.1, 71, -33.7, 71, -53.5, 64, -67.5, 64, -69.9, 51, -82, 51, -83.3)
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(3563, 346)
-scale = Vector2(3.36737, -13.5092)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(3.5882e-05, 0.0740228)
-shape = SubResource("RectangleShape2D_ky481")
-
 [node name="CharacterBody2D" parent="." instance=ExtResource("10_51dy3")]
 position = Vector2(1290, 1125)
 
@@ -4259,5 +4252,13 @@ position = Vector2(749, 256)
 [node name="Spawn4" parent="." instance=ExtResource("11_2fnw0")]
 position = Vector2(-483, 1714)
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(3564, 363)
+script = ExtResource("12_o7kj4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -18)
+shape = SubResource("RectangleShape2D_2fnw0")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
