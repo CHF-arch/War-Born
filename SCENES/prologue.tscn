@@ -88,10 +88,10 @@ stream = ExtResource("3_54sfp")
 autoplay = true
 
 [node name="Button" type="Button" parent="."]
-offset_left = 1777.0
-offset_top = 1005.0
-offset_right = 1888.0
-offset_bottom = 1063.0
+offset_left = 1795.0
+offset_top = 1029.0
+offset_right = 1901.0
+offset_bottom = 1066.0
 theme = ExtResource("4_yvt2g")
 script = ExtResource("5_eayaj")
 
