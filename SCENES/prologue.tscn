@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://lynt1yx1gyfb"]
+[gd_scene load_steps=12 format=3 uid="uid://lynt1yx1gyfb"]
 
 [ext_resource type="Texture2D" uid="uid://w0lxaslpudla" path="res://prologue/111.png" id="1_hkn5q"]
 [ext_resource type="FontFile" uid="uid://dqiwaltnyashr" path="res://info_menu/Good Times Rg.otf" id="2_7rmy1"]
@@ -41,6 +41,43 @@ tracks/0/keys = {
 _data = {
 &"RESET": SubResource("Animation_54sfp"),
 &"label": SubResource("Animation_7rmy1")
+}
+
+[sub_resource type="Animation" id="Animation_eayaj"]
+resource_name = "button"
+length = 43.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 43),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_6067l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rykdj"]
+_data = {
+&"RESET": SubResource("Animation_6067l"),
+&"button": SubResource("Animation_eayaj")
 }
 
 [node name="Node2D" type="Node2D"]
@@ -88,11 +125,18 @@ stream = ExtResource("3_54sfp")
 autoplay = true
 
 [node name="Button" type="Button" parent="."]
-offset_left = 1795.0
-offset_top = 1029.0
+visible = false
+offset_left = 1786.0
+offset_top = 1016.0
 offset_right = 1901.0
 offset_bottom = 1066.0
 theme = ExtResource("4_yvt2g")
 script = ExtResource("5_eayaj")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_rykdj")
+}
+autoplay = "button"
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

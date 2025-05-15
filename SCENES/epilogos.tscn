@@ -1,0 +1,104 @@
+[gd_scene load_steps=9 format=3 uid="uid://qygqyu66o8fp"]
+
+[ext_resource type="Texture2D" uid="uid://be11mrunup0io" path="res://epilogue/wallpaperflare.com_wallpaper.jpg" id="1_mi3m7"]
+[ext_resource type="AudioStream" uid="uid://c8jxwqi6q02pq" path="res://epilogue/xronis_outro.wav" id="2_mmc6l"]
+[ext_resource type="FontFile" uid="uid://dqiwaltnyashr" path="res://info_menu/Good Times Rg.otf" id="3_fcw8t"]
+[ext_resource type="Theme" uid="uid://borsf41at585l" path="res://buttons/exit_button.tres" id="4_guvgp"]
+[ext_resource type="Script" uid="uid://dakpkx5tcnkhu" path="res://epilogue/button_prologue.gd" id="5_fcqow"]
+
+[sub_resource type="Animation" id="Animation_hhqej"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(138, -480)]
+}
+
+[sub_resource type="Animation" id="Animation_7of4d"]
+resource_name = "epilogos"
+length = 50.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.566667, 0, 50),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(138, -480), Vector2(138, -480), Vector2(138, 1110)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cxrl2"]
+_data = {
+&"RESET": SubResource("Animation_hhqej"),
+&"epilogos": SubResource("Animation_7of4d")
+}
+
+[node name="Node2D" type="Node2D"]
+metadata/_edit_vertical_guides_ = [953.0]
+
+[node name="Wallpaperflare_comWallpaper" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_mi3m7")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_mmc6l")
+autoplay = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 138.0
+offset_top = -480.0
+offset_right = 1766.0
+offset_bottom = 375.0
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_fcw8t")
+theme_override_font_sizes/font_size = 25
+text = "Είχαν νικήσει.
+Ο κόσμος θα συνέχιζε να μάχεται. Ο πόλεμος δεν θα τελείωνε πραγματικά. Αλλά γι’ αυτούς, είχε τελειώσει.
+Για χρόνια, ήταν στρατιώτες, όπλα σε έναν ξένο πόλεμο. Τώρα, ήταν απλώς δύο αδέλφια σημαδεμένα, αλλά αλώβητα.
+Ο Ντάνιελ άφησε μια ανάσα που δεν είχε συνειδητοποιήσει ότι κρατούσε. \"Και δεν θα τους άφηνα να σε πάρουν.\"
+\"Νόμιζα πως είχες χαθεί,\" ψιθύρισε ο Τζέιμς.
+Ο Τζέιμς κάθισε δίπλα του, κοιτάζοντας τον ορίζοντα, με το βάρος του παρελθόντος στα μάτια του.
+βήμα, κάθε σφαίρα, κάθε θυσία τους είχε οδηγήσει σε αυτή τη στιγμή.
+Πάλεψαν μέσα από εχθρικές γραμμές, μέσα στο σκοτάδι και την απελπισία. Η αποστολή παραλίγο να κοστίσει στον Ντάνιελ τη ζωή του, αλλά κάθε βήμα, κάθε σφαίρα, κάθε θυσία τους είχε οδηγήσει σε αυτή τη στιγμή. 
+Ο Τζέιμς ήταν ασφαλής. Πληγωμένος, εξαντλημένος, αλλά ζωντανός.
+κόσμος μύριζε ακόμα καπνό και θάνατο, αλλά για πρώτη φορά μετά από χρόνια, υπήρχε κάτι άλλο ελπίδα.
+Ο Ντάνιελ στάθηκε στην άκρη του πεδίου μάχης, παρακολουθώντας τον ήλιο να βάφει τον ουρανό με αποχρώσεις πορτοκαλί και κόκκινου. Ο
+Ο πόλεμος είχε πάρει τα πάντα αλλά όχι τον Τζέιμς.
+ 
+
+
+
+
+
+
+
+
+"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_cxrl2")
+}
+autoplay = "epilogos"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1836.0
+offset_top = 6.0
+offset_right = 1914.0
+offset_bottom = 60.0
+theme = ExtResource("4_guvgp")
+script = ExtResource("5_fcqow")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

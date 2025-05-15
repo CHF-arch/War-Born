@@ -1,10 +1,12 @@
-[gd_scene load_steps=20 format=4 uid="uid://btgw6hkp8hiq0"]
+[gd_scene load_steps=24 format=4 uid="uid://btgw6hkp8hiq0"]
 
 [ext_resource type="Texture2D" uid="uid://bnc2v754s28uh" path="res://MAP/SMS Military Base Files/top_right_building.png" id="1_sys84"]
 [ext_resource type="Texture2D" uid="uid://byk5ie8y1nluy" path="res://MAP/SMS Military Base Files/SMS Military Base Full Sheet.png" id="2_rr2ir"]
 [ext_resource type="PackedScene" uid="uid://bnwot7glcp2c0" path="res://SCENES/soldier_character.tscn" id="3_ddfq8"]
 [ext_resource type="Texture2D" uid="uid://ccnn5ldn30u6y" path="res://top_left_build/InteriorTilesLITE.png" id="4_rr2ir"]
 [ext_resource type="PackedScene" uid="uid://dfsjyn6ia66c5" path="res://SCENES/spawn.tscn" id="5_ddfq8"]
+[ext_resource type="Texture2D" uid="uid://eflgfu80ysix" path="res://brother.png" id="6_xvym8"]
+[ext_resource type="Script" uid="uid://bjbws7vhkfxeb" path="res://SCENES/area_2d4_end.gd" id="6_ya7hs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_leouu"]
 texture = ExtResource("1_sys84")
@@ -7050,6 +7052,11 @@ texture = ExtResource("4_rr2ir")
 [sub_resource type="TileSet" id="TileSet_ya7hs"]
 sources/1 = SubResource("TileSetAtlasSource_xvym8")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ya7hs"]
+size = Vector2(178.339, 137.405)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ya7hs"]
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -7092,14 +7099,42 @@ scale = Vector2(7, 7)
 tile_map_data = PackedByteArray("AAArAPj/AQAEABEAAAAsAPj/AQAFABEAAAArAPX/AQAUABIAAAArAPb/AQAUABMAAAAsAPX/AQAVABIAAAAsAPb/AQAVABMAAAAuAPb/AQAXABEAAGAuAPf/AQAWABEAAGArAPP/AQASABIAAAArAPT/AQASABMAAAAsAPP/AQATABIAAAAsAPT/AQATABMAAAAtAAUAAQAAABIAAAAtAAYAAQAAABMAAAAuAAUAAQABABIAAAAuAAYAAQABABMAAAArAAQAAQAQABAAAAArAAUAAQAQABEAAAArAAYAAQAQABIAAAAsAAQAAQARABAAAAAsAAUAAQARABEAAAAsAAYAAQARABIAAAAwAAYAAQAIABQAAAAwAAcAAQAIABUAAAAwAAgAAQAIABYAAAAwAAkAAQAIABcAAAAxAAYAAQAJABQAAAAxAAcAAQAJABUAAAAxAAgAAQAJABYAAAAxAAkAAQAJABcAAAA=")
 tile_set = SubResource("TileSet_ya7hs")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("3_ddfq8")]
-position = Vector2(-416, 505)
-
 [node name="Spawn" parent="." instance=ExtResource("5_ddfq8")]
-position = Vector2(3288, -1052)
+position = Vector2(4295, -292)
 
 [node name="Spawn2" parent="." instance=ExtResource("5_ddfq8")]
 position = Vector2(-233, -1493)
 
 [node name="Spawn3" parent="." instance=ExtResource("5_ddfq8")]
-position = Vector2(5104, 166)
+position = Vector2(5026, 204)
+
+[node name="Spawn4" parent="." instance=ExtResource("5_ddfq8")]
+position = Vector2(3230, -1463)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_ddfq8")]
+position = Vector2(-424, 507)
+
+[node name="Area2D" type="Area2D" parent="."]
+physics_interpolation_mode = 2
+position = Vector2(5500, 138)
+rotation = 1.5708
+scale = Vector2(1.81676, 1.71027)
+script = ExtResource("6_ya7hs")
+
+[node name="Brother" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("6_xvym8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.55043, 10.2327)
+shape = SubResource("RectangleShape2D_ya7hs")
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(5540, 134)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(-8, -1)
+scale = Vector2(-7.87861, 7.25069)
+shape = SubResource("CircleShape2D_ya7hs")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
