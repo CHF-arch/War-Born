@@ -2,7 +2,7 @@ extends RigidBody2D
 
 var speed = 800
 var direction = Vector2()
-var damage = 1 #test
+var damage = 1 
 
 func _ready():
 	add_to_group("enemy_bullets")

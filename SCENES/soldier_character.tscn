@@ -7,14 +7,12 @@
 radius = 124.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ebx12"]
-radius = 140.0
-height = 280.0
+radius = 172.0
+height = 372.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 texture_filter = 1
 scale = Vector2(0.5, 0.5)
-collision_layer = 2
-collision_mask = 21
 script = ExtResource("1_kdu6k")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -39,3 +37,7 @@ collision_mask = 16
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-36, 2)
 shape = SubResource("CapsuleShape2D_ebx12")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

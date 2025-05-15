@@ -42,6 +42,7 @@ func shoot():
 	await get_tree().create_timer(shoot_cooldown).timeout
 	if bullet_scene and is_instance_valid(player):
 		var bullet = bullet_scene.instantiate()
+		bullet.damage = 1
 		bullet.global_position = $Muzzle.global_position
 		
 		bullet.look_at(player.global_position)
