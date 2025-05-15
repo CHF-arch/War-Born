@@ -3,7 +3,7 @@ extends Node2D
 
 func _on_start_pressed() -> void:
 	$click.play()
-	get_tree().change_scene_to_file("res://SCENES/prologue.tscn")
+	get_tree().change_scene_to_file("res://SCENES/load_screen.tscn")
 	AudioManager.sfx_XronisIntro.stop()
 
 func _on_exit_pressed() -> void:

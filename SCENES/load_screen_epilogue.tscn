@@ -1,0 +1,332 @@
+[gd_scene load_steps=12 format=3 uid="uid://c28l27sh5oxfs"]
+
+[ext_resource type="Script" uid="uid://dclbsxxwaml4b" path="res://scripts/load_screen_epilogue.gd" id="1_875im"]
+[ext_resource type="Texture2D" uid="uid://b6tfirquu7ag0" path="res://load_screen/load_screen.png" id="1_mj5rw"]
+[ext_resource type="Texture2D" uid="uid://jxhhxxujjmiu" path="res://load_screen/Top.png" id="2_875im"]
+[ext_resource type="Texture2D" uid="uid://d13yvk282ie3w" path="res://load_screen/Bullet.png" id="3_bfvsj"]
+[ext_resource type="FontFile" uid="uid://dqiwaltnyashr" path="res://info_menu/Good Times Rg.otf" id="4_s1km4"]
+
+[sub_resource type="Animation" id="Animation_mj5rw"]
+resource_name = "BULLETS"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bullet:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Bullet2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Bullet7:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.87),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Bullet8:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Bullet6:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Bullet5:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.62),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Bullet4:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Bullet3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.375),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_875im"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bullet:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Bullet2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Bullet7:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Bullet8:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Bullet6:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Bullet5:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Bullet4:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Bullet3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bfvsj"]
+_data = {
+&"BULLETS": SubResource("Animation_mj5rw"),
+&"RESET": SubResource("Animation_875im")
+}
+
+[sub_resource type="Animation" id="Animation_bfvsj"]
+resource_name = "dots"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label2:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_s1km4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label2:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_njq2e"]
+_data = {
+&"RESET": SubResource("Animation_s1km4"),
+&"dots": SubResource("Animation_bfvsj")
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_875im")
+
+[node name="LoadScreen" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_mj5rw")
+
+[node name="Top" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_875im")
+
+[node name="Bullet" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(812.5, 536.5)
+texture = ExtResource("3_bfvsj")
+
+[node name="Bullet2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(855.5, 536.5)
+texture = ExtResource("3_bfvsj")
+
+[node name="Bullet7" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1067.5, 536.5)
+texture = ExtResource("3_bfvsj")
+
+[node name="Bullet8" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1109.5, 536.5)
+texture = ExtResource("3_bfvsj")
+
+[node name="Bullet6" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1025.5, 536.5)
+texture = ExtResource("3_bfvsj")
+
+[node name="Bullet5" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(983.5, 536.5)
+texture = ExtResource("3_bfvsj")
+
+[node name="Bullet4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(941.5, 536.5)
+texture = ExtResource("3_bfvsj")
+
+[node name="Bullet3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(898.5, 536.5)
+texture = ExtResource("3_bfvsj")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 878.0
+offset_top = 608.0
+offset_right = 1042.0
+offset_bottom = 645.0
+theme_override_fonts/font = ExtResource("4_s1km4")
+theme_override_font_sizes/font_size = 24
+text = "LOADING"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1028.0
+offset_top = 608.0
+offset_right = 1068.0
+offset_bottom = 631.0
+theme_override_fonts/font = ExtResource("4_s1km4")
+theme_override_font_sizes/font_size = 24
+text = ". . ."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_bfvsj")
+}
+autoplay = "BULLETS"
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_njq2e")
+}
+autoplay = "dots"

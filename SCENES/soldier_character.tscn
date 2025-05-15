@@ -38,6 +38,4 @@ collision_mask = 16
 position = Vector2(-36, 2)
 shape = SubResource("CapsuleShape2D_ebx12")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
