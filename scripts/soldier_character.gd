@@ -6,10 +6,16 @@ var bullet = preload("res://SCENES/bullet.tscn")
 
 var fire_rate = 5.0  
 var time_since_last_shot = 0.0
-var health := 3
+var health := 5
+var hearts_list : Array[TextureRect]
+
 
 func _ready():
-	add_to_group("player") 
+	add_to_group("player")
+	var hearts_parent = $health_bar/HBoxContainer
+	for child in hearts_parent.get_children():
+		hearts_list.append(child)
+	print(hearts_list)
 
 func _physics_process(delta: float) -> void:
 	var input_dir = Input.get_vector("left", "right", "up", "down")
@@ -37,6 +43,7 @@ func fire():
 
 func take_damage(damage_amount: int) -> void:
 	health -= damage_amount
+	update_heart_display()
 	print("Soldier health:", health)
 	if health <= 0:
 		die()
@@ -46,10 +53,12 @@ func die():
 	queue_free()
 	
 
-
-
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print("Enemy collided with:", body.name)
 	if body.is_in_group("enemy_bullets"):
 		body.queue_free()
 		take_damage(body.damage)
+
+func update_heart_display():
+	for i in range(hearts_list.size()):
+		hearts_list[i].visible = i < health

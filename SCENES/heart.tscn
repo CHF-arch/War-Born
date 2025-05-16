@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqtijlj4m10xc"]
+
+[ext_resource type="Texture2D" uid="uid://b8w4j5rqabrlf" path="res://NEOI_PAIXTES/heart.png" id="1_2lv1r"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(73, 67.5)
+scale = Vector2(3.28125, 3.10938)
+texture = ExtResource("1_2lv1r")

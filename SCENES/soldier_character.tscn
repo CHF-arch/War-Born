@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bnwot7glcp2c0"]
+[gd_scene load_steps=6 format=3 uid="uid://bnwot7glcp2c0"]
 
 [ext_resource type="Script" uid="uid://d3vfninbxoaaj" path="res://scripts/soldier_character.gd" id="1_kdu6k"]
 [ext_resource type="Texture2D" uid="uid://byo2n5nv8qaqr" path="res://Top_Down_Survivor/main_chara.png" id="2_ebx12"]
+[ext_resource type="PackedScene" uid="uid://dqtijlj4m10xc" path="res://SCENES/heart.tscn" id="3_ituxq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ebx12"]
 radius = 124.0
@@ -37,5 +38,46 @@ collision_mask = 16
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-36, 2)
 shape = SubResource("CapsuleShape2D_ebx12")
+
+[node name="health_bar" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="health_bar"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="heart" type="TextureRect" parent="health_bar/HBoxContainer"]
+custom_minimum_size = Vector2(23, 0)
+layout_mode = 2
+
+[node name="Sprite2D" parent="health_bar/HBoxContainer/heart" instance=ExtResource("3_ituxq")]
+position = Vector2(46, 62)
+
+[node name="heart2" type="TextureRect" parent="health_bar/HBoxContainer"]
+custom_minimum_size = Vector2(23, 0)
+layout_mode = 2
+
+[node name="Sprite2D" parent="health_bar/HBoxContainer/heart2" instance=ExtResource("3_ituxq")]
+position = Vector2(107, 62)
+
+[node name="heart3" type="TextureRect" parent="health_bar/HBoxContainer"]
+custom_minimum_size = Vector2(23, 0)
+layout_mode = 2
+
+[node name="Sprite2D" parent="health_bar/HBoxContainer/heart3" instance=ExtResource("3_ituxq")]
+position = Vector2(167, 63)
+
+[node name="heart4" type="TextureRect" parent="health_bar/HBoxContainer"]
+custom_minimum_size = Vector2(23, 0)
+layout_mode = 2
+
+[node name="Sprite2D" parent="health_bar/HBoxContainer/heart4" instance=ExtResource("3_ituxq")]
+position = Vector2(228, 63)
+
+[node name="heart5" type="TextureRect" parent="health_bar/HBoxContainer"]
+custom_minimum_size = Vector2(23, 0)
+layout_mode = 2
+
+[node name="Sprite2D" parent="health_bar/HBoxContainer/heart5" instance=ExtResource("3_ituxq")]
+position = Vector2(292, 62)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
