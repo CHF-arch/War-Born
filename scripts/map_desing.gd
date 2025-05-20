@@ -17,3 +17,7 @@ func _process(delta):
 	if entered == true:
 		if Input.is_action_just_pressed("ui_accept"):
 			get_tree().change_scene_to_file("res://SCENES/right_house_ins.tscn")
+
+
+func _on_ready() -> void:
+	MusicIngame.play_music()

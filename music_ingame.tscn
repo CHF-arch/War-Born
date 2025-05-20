@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://oapv5qgry248"]
+
+[ext_resource type="AudioStream" uid="uid://b1g117uof621i" path="res://epic-war-background-music-333128.mp3" id="1_edjnu"]
+[ext_resource type="Script" uid="uid://cjji3setaqabd" path="res://music_ingame.gd" id="1_q1dj3"]
+
+[node name="music_ingame" type="Node"]
+script = ExtResource("1_q1dj3")
+
+[node name="ingamesfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_edjnu")
+volume_db = -17.0
