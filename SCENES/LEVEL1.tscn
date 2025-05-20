@@ -4324,3 +4324,4 @@ autoplay = "LABEL"
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[connection signal="ready" from="Area2D" to="Area2D" method="_on_ready"]

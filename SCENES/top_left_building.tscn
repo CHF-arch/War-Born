@@ -7055,7 +7055,7 @@ sources/1 = SubResource("TileSetAtlasSource_xvym8")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ya7hs"]
 size = Vector2(178.339, 137.405)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ya7hs"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s10jd"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -7121,20 +7121,23 @@ rotation = 1.5708
 scale = Vector2(1.81676, 1.71027)
 script = ExtResource("6_ya7hs")
 
-[node name="Brother" type="Sprite2D" parent="Area2D"]
-texture = ExtResource("6_xvym8")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0.55043, 10.2327)
 shape = SubResource("RectangleShape2D_ya7hs")
 
-[node name="Area2D2" type="Area2D" parent="."]
-position = Vector2(5540, 134)
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+position = Vector2(5514, 133)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(-8, -1)
-scale = Vector2(-7.87861, 7.25069)
-shape = SubResource("CircleShape2D_ya7hs")
+[node name="Brother" type="Sprite2D" parent="CharacterBody2D2"]
+position = Vector2(-4.35541, -5.69575)
+rotation = 1.5708
+scale = Vector2(1.81676, 1.71027)
+texture = ExtResource("6_xvym8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
+position = Vector2(22.0001, -6)
+scale = Vector2(5.69387, -5.92723)
+shape = SubResource("RectangleShape2D_s10jd")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
