@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var rotation_speed: float = 5.0
 @export var bullet_scene = preload("res://SCENES/enemy_bullet.tscn")  
 
+
 var bullet_speed = 1200
 var player: Node2D  
 var can_shoot: bool = true
@@ -59,6 +60,7 @@ func take_damage(damage_amount: int) -> void:
 	print("Enemy health:", health)
 	if health <= 0:
 		die()
+
 
 func die():
 	queue_free()

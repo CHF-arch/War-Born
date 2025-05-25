@@ -3,6 +3,7 @@ extends CharacterBody2D
 var movespeed = 1000
 var bullet_speed = 3000
 var bullet = preload("res://SCENES/bullet.tscn")
+@onready var shoot_audio: AudioStreamPlayer = $Shoot_audio
 
 var fire_rate = 5.0  
 var time_since_last_shot = 0.0
@@ -38,8 +39,9 @@ func fire():
 	bullet_instance.global_rotation = global_rotation
 	var direction = Vector2.RIGHT.rotated(global_rotation)
 	bullet_instance.apply_impulse(direction * bullet_speed)
-	
 	get_tree().root.add_child(bullet_instance)
+	shoot_audio.play()
+
 
 func take_damage(damage_amount: int) -> void:
 	health -= damage_amount

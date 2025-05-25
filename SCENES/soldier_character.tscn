@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bnwot7glcp2c0"]
+[gd_scene load_steps=7 format=3 uid="uid://bnwot7glcp2c0"]
 
 [ext_resource type="Script" uid="uid://d3vfninbxoaaj" path="res://scripts/soldier_character.gd" id="1_kdu6k"]
 [ext_resource type="Texture2D" uid="uid://byo2n5nv8qaqr" path="res://Top_Down_Survivor/main_chara.png" id="2_ebx12"]
 [ext_resource type="PackedScene" uid="uid://dqtijlj4m10xc" path="res://SCENES/heart.tscn" id="3_ituxq"]
+[ext_resource type="AudioStream" uid="uid://q6flymvpjts1" path="res://Gunshot-Sound-Effect-Single-Shot.mp3" id="4_e5n5d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ebx12"]
 radius = 124.0
@@ -79,5 +80,12 @@ layout_mode = 2
 
 [node name="Sprite2D" parent="health_bar/HBoxContainer/heart5" instance=ExtResource("3_ituxq")]
 position = Vector2(292, 62)
+
+[node name="Shoot_audio" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("4_e5n5d")
+volume_db = -25.0
+max_polyphony = 16
+parameters/looping = false
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
