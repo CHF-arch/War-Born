@@ -4305,7 +4305,7 @@ position = Vector2(2903, 469)
 position = Vector2(749, 256)
 
 [node name="Spawn4" parent="." instance=ExtResource("11_2fnw0")]
-position = Vector2(-483, 1714)
+position = Vector2(3627, 1292)
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(3564, 363)

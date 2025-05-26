@@ -4195,7 +4195,7 @@ _data = {
 script = SubResource("GDScript_7mobf")
 
 [node name="Spawn" parent="." instance=ExtResource("2_boh22")]
-position = Vector2(-533, 2575)
+position = Vector2(224, 1859)
 
 [node name="Spawn2" parent="." instance=ExtResource("2_boh22")]
 position = Vector2(472, 556)
