@@ -1,17 +1,22 @@
 extends Area2D
 
+@export var next_scene_path: String = "res://SCENES/level_2.tscn"
+var _player_in_range: bool = false
 
-var entered = false 
+func _ready():
+	monitoring = true
+	body_entered.connect(_on_body_entered)
+	body_exited.connect(_on_body_exited)
 
-func _on_body_entered(body: Node2D) -> void:
-	entered = true
+func _on_body_entered(body: Node2D):
+	if body.is_in_group("player"):
+		_player_in_range = true
 
+func _on_body_exited(body: Node2D):
+	if body.is_in_group("player"):
+		_player_in_range = false
 
-func _on_body_exited(body: Node2D) -> void:
-	entered = false
-
-
-func _process(delta):
-	if entered == true:
-		if Input.is_action_just_pressed("ui_accept"):
-			get_tree().change_scene_to_file("res://SCENES/level_2.tscn")
+func _unhandled_input(event: InputEvent):
+	await get_tree().create_timer(10).timeout
+	if _player_in_range and Input.is_action_just_pressed("ui_accept"):
+		get_tree().change_scene_to_file(next_scene_path)

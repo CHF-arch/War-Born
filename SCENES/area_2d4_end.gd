@@ -19,3 +19,4 @@ func _on_body_exited(body: Node2D):
 func _unhandled_input(event: InputEvent):
 	if _player_in_range and Input.is_action_just_pressed("ui_accept"):
 		get_tree().change_scene_to_file(next_scene_path)
+		MusicIngame.stop_music()
