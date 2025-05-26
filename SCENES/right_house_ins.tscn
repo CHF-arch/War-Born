@@ -338,9 +338,6 @@ tile_set = SubResource("TileSet_wjqg3")
 [node name="player" parent="." instance=ExtResource("2_xm3iu")]
 position = Vector2(2524, -390)
 
-[node name="Spawn" parent="." instance=ExtResource("4_t8vb5")]
-position = Vector2(918, 939)
-
 [node name="Spawn2" parent="." instance=ExtResource("4_t8vb5")]
 position = Vector2(1868, 935)
 

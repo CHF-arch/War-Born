@@ -7103,13 +7103,13 @@ tile_set = SubResource("TileSet_ya7hs")
 position = Vector2(4295, -292)
 
 [node name="Spawn2" parent="." instance=ExtResource("5_ddfq8")]
-position = Vector2(-233, -1493)
+position = Vector2(1500, -1139)
 
 [node name="Spawn3" parent="." instance=ExtResource("5_ddfq8")]
 position = Vector2(5026, 204)
 
 [node name="Spawn4" parent="." instance=ExtResource("5_ddfq8")]
-position = Vector2(3230, -1463)
+position = Vector2(2355, -239)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_ddfq8")]
 position = Vector2(-424, 507)

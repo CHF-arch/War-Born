@@ -4296,16 +4296,13 @@ polygon = PackedVector2Array(39.7, -88, 7.5, -88, 0.599998, -85, -1.8, -85, -13.
 position = Vector2(3083, 2990)
 
 [node name="Spawn" parent="." instance=ExtResource("11_2fnw0")]
-position = Vector2(2226, -453)
-
-[node name="Spawn2" parent="." instance=ExtResource("11_2fnw0")]
-position = Vector2(2903, 469)
+position = Vector2(3360, 1193)
 
 [node name="Spawn3" parent="." instance=ExtResource("11_2fnw0")]
-position = Vector2(749, 256)
+position = Vector2(2289, -211)
 
 [node name="Spawn4" parent="." instance=ExtResource("11_2fnw0")]
-position = Vector2(3627, 1292)
+position = Vector2(2898, 486)
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(3564, 363)
