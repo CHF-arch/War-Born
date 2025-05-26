@@ -98,9 +98,9 @@ autoplay = true
 
 [node name="Label" type="Label" parent="."]
 offset_left = 139.0
-offset_top = -1225.0
+offset_top = 1067.0
 offset_right = 1767.0
-offset_bottom = -4.0
+offset_bottom = 2288.0
 theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("3_fcw8t")
 theme_override_font_sizes/font_size = 48
@@ -120,9 +120,9 @@ autowrap_mode = 3
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 592.0
-offset_top = -540.0
+offset_top = 1072.0
 offset_right = 1314.0
-offset_bottom = 6.0
+offset_bottom = 1618.0
 theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("3_fcw8t")
 theme_override_font_sizes/font_size = 48

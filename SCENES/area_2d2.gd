@@ -17,6 +17,6 @@ func _on_body_exited(body: Node2D):
 		_player_in_range = false
 
 func _unhandled_input(event: InputEvent):
-	await get_tree().create_timer(10).timeout
+	await get_tree().create_timer(25).timeout
 	if _player_in_range and Input.is_action_just_pressed("ui_accept"):
 		get_tree().change_scene_to_file(next_scene_path)
