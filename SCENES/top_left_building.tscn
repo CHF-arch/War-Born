@@ -7100,16 +7100,16 @@ tile_map_data = PackedByteArray("AAArAPj/AQAEABEAAAAsAPj/AQAFABEAAAArAPX/AQAUABI
 tile_set = SubResource("TileSet_ya7hs")
 
 [node name="Spawn" parent="." instance=ExtResource("5_ddfq8")]
-position = Vector2(4295, -292)
+position = Vector2(816, -1407)
 
 [node name="Spawn2" parent="." instance=ExtResource("5_ddfq8")]
-position = Vector2(1500, -1139)
+position = Vector2(2214, -1301)
 
 [node name="Spawn3" parent="." instance=ExtResource("5_ddfq8")]
-position = Vector2(5026, 204)
+position = Vector2(3455, -552)
 
 [node name="Spawn4" parent="." instance=ExtResource("5_ddfq8")]
-position = Vector2(2355, -239)
+position = Vector2(4189, 104)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_ddfq8")]
 position = Vector2(-424, 507)

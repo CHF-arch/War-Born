@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=4 uid="uid://1yksa4r0qhce"]
+[gd_scene load_steps=10 format=4 uid="uid://1yksa4r0qhce"]
 
 [ext_resource type="Texture2D" uid="uid://u1srewt4edkp" path="res://MAP/SMS Military Base Files/SMS_RPG_Military_Barracks_Sheet.png" id="1_rhhoj"]
 [ext_resource type="PackedScene" uid="uid://bnwot7glcp2c0" path="res://SCENES/soldier_character.tscn" id="2_xm3iu"]
-[ext_resource type="Script" uid="uid://cp3dbfsvuywhm" path="res://SCENES/area_2d2.gd" id="4_bpyta"]
 [ext_resource type="PackedScene" uid="uid://dfsjyn6ia66c5" path="res://SCENES/spawn.tscn" id="4_t8vb5"]
 [ext_resource type="PackedScene" uid="uid://dj4fha7lputyu" path="res://SCENES/card.tscn" id="6_2ihc8"]
 
@@ -237,9 +236,6 @@ texture = ExtResource("1_rhhoj")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_q153n")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bpyta"]
-size = Vector2(182, 95)
-
 [node name="Node2D" type="Node2D"]
 metadata/_edit_vertical_guides_ = [1269.0]
 
@@ -339,20 +335,11 @@ tile_set = SubResource("TileSet_wjqg3")
 position = Vector2(2524, -390)
 
 [node name="Spawn2" parent="." instance=ExtResource("4_t8vb5")]
-position = Vector2(1868, 935)
+position = Vector2(2075, 979)
 
 [node name="Spawn3" parent="." instance=ExtResource("4_t8vb5")]
-position = Vector2(528, -160)
-
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(2509, -512)
-script = ExtResource("4_bpyta")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_bpyta")
+position = Vector2(519, -191)
 
 [node name="Area2D3" parent="." instance=ExtResource("6_2ihc8")]
-position = Vector2(1604, -625)
-
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+position = Vector2(1652, -632)
+scale = Vector2(0.894978, 0.703735)

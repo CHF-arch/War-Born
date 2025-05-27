@@ -4158,16 +4158,16 @@ size = Vector2(125.5, 87)
 script = SubResource("GDScript_7mobf")
 
 [node name="Spawn" parent="." instance=ExtResource("2_boh22")]
-position = Vector2(224, 1859)
+position = Vector2(629, 1667)
 
 [node name="Spawn2" parent="." instance=ExtResource("2_boh22")]
-position = Vector2(472, 556)
+position = Vector2(263, 527)
 
 [node name="Spawn3" parent="." instance=ExtResource("2_boh22")]
-position = Vector2(2457, 1184)
+position = Vector2(1822, -771)
 
 [node name="Spawn4" parent="." instance=ExtResource("2_boh22")]
-position = Vector2(1567, -331)
+position = Vector2(1475, 3)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1
@@ -4184,8 +4184,11 @@ scale = Vector2(1.24079, 1.24917)
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
-offset_right = 647.0
-offset_bottom = 338.0
+offset_left = -8.86532
+offset_top = -7.20478
+offset_right = 638.135
+offset_bottom = 396.795
+scale = Vector2(1.04179, 0.890387)
 theme_override_fonts/font = ExtResource("12_boh22")
 theme_override_font_sizes/font_size = 49
 text = "ΤΟΠΟΘΕΤΗΣΕ ΤΗΝ ΚΑΡΤΑ ΑΣΦΑΛΕΙΑΣ ΣΤΟ ΑΡΙΣΤΕΡΑ ΚΤΗΡΙΟ ΚΑΙ ΒΡΕΣ ΤΟΝ ΑΔΕΡΦΟ ΣΟΥ ΓΙΑ ΝΑ ΤΟΝ ΣΩΣΕΙΣ

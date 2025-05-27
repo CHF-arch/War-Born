@@ -9,3 +9,4 @@ script = ExtResource("1_q1dj3")
 [node name="ingamesfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_edjnu")
 volume_db = -17.0
+parameters/looping = true

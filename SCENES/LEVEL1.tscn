@@ -4155,8 +4155,9 @@ scale = Vector2(1.22679, 1.34653)
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
-offset_right = 655.0
-offset_bottom = 307.0
+offset_right = 642.0
+offset_bottom = 342.0
+scale = Vector2(1.00727, 0.865875)
 theme_override_fonts/font = ExtResource("13_qyflc")
 theme_override_font_sizes/font_size = 49
 text = "ΣΚΟΤΩΣΕ ΟΛΟΥΣ ΤΟΥΣ ΕΧΡΟΥΣ ΚΑΙ ΜΠΕΣ ΣΤΟ ΚΤΗΡΙΟ ΣΤΑ ΔΕΞΙΑ ΓΙΑ ΝΑ ΑΠΟΚΤΗΣΕΙΣ ΤΗΝ ΚΑΡΤΑ ΑΣΦΑΛΕΙΑΣ"
@@ -4260,13 +4261,14 @@ polygon = PackedVector2Array(39.7, -88, 7.5, -88, 0.599998, -85, -1.8, -85, -13.
 position = Vector2(3083, 2990)
 
 [node name="Spawn" parent="." instance=ExtResource("11_2fnw0")]
-position = Vector2(3360, 1193)
+position = Vector2(3564, 344)
+scale = Vector2(-6204.6, 314.376)
 
 [node name="Spawn3" parent="." instance=ExtResource("11_2fnw0")]
-position = Vector2(2289, -211)
+position = Vector2(1450, -796)
 
 [node name="Spawn4" parent="." instance=ExtResource("11_2fnw0")]
-position = Vector2(2898, 486)
+position = Vector2(2289, -291)
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(3564, 363)
