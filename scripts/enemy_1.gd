@@ -51,7 +51,7 @@ func shoot():
 		bullet.apply_impulse(direction * bullet_speed)
 		
 		get_parent().add_child(bullet)
-		bullet.modulate = Color.RED
+		bullet.modulate = Color.BLACK
 		print("Bullet spawned! Pos: ", bullet.global_position, " Dir: ", direction)
 		
 

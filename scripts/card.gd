@@ -1,5 +1,6 @@
 extends Area2D
 
+@export var next_scene_path: String = "res://SCENES/level_2.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,3 +15,4 @@ func _on_body_entered(body: Node2D) -> void:
 		tween.tween_property(self, "modulate:a", 0.0, 0.3)
 		
 		queue_free()
+		get_tree().change_scene_to_file(next_scene_path)

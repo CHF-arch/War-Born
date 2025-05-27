@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://cnadvcsp4vvuc"]
+[gd_scene load_steps=20 format=4 uid="uid://cnadvcsp4vvuc"]
 
 [ext_resource type="Texture2D" uid="uid://byk5ie8y1nluy" path="res://MAP/SMS Military Base Files/SMS Military Base Full Sheet.png" id="1_2rhms"]
 [ext_resource type="Script" uid="uid://dj3odbqouj8w3" path="res://scripts/map_desing.gd" id="1_gbx3p"]
@@ -4136,43 +4136,6 @@ size = Vector2(219.333, 85.3334)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2fnw0"]
 size = Vector2(192, 118)
 
-[sub_resource type="Animation" id="Animation_qyflc"]
-resource_name = "LABEL"
-length = 5.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Panel:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-
-[sub_resource type="Animation" id="Animation_64uqx"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Panel:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ie5yl"]
-_data = {
-&"LABEL": SubResource("Animation_qyflc"),
-&"RESET": SubResource("Animation_64uqx")
-}
-
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_gbx3p")
 
@@ -4184,10 +4147,11 @@ tile_map_data = PackedByteArray("AAD0//D/AQAeAA0AAAD0//H/AQAFADMAABD0//L/AQAFADM
 tile_set = SubResource("TileSet_cwc5l")
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 3220.0
-offset_top = 2584.0
-offset_right = 3869.0
-offset_bottom = 2879.0
+offset_left = 3058.0
+offset_top = 2470.0
+offset_right = 3707.0
+offset_bottom = 2765.0
+scale = Vector2(1.22679, 1.34653)
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
@@ -4195,7 +4159,7 @@ offset_right = 655.0
 offset_bottom = 307.0
 theme_override_fonts/font = ExtResource("13_qyflc")
 theme_override_font_sizes/font_size = 49
-text = "KILL ALL THE ENEMIES AND ENTER THE RIGHT BUILDING TO GET THE ACCESS CARD"
+text = "ΣΚΟΤΩΣΕ ΟΛΟΥΣ ΤΟΥΣ ΕΧΡΟΥΣ ΚΑΙ ΜΠΕΣ ΣΤΟ ΚΤΗΡΙΟ ΣΤΑ ΔΕΞΙΑ ΓΙΑ ΝΑ ΑΠΟΚΤΗΣΕΙΣ ΤΗΝ ΚΑΡΤΑ ΑΣΦΑΛΕΙΑΣ"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -4311,12 +4275,6 @@ script = ExtResource("12_o7kj4")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -18)
 shape = SubResource("RectangleShape2D_2fnw0")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_ie5yl")
-}
-autoplay = "LABEL"
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

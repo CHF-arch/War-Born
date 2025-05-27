@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://3j8x23l2fejd"]
+[gd_scene load_steps=11 format=3 uid="uid://3j8x23l2fejd"]
 
 [ext_resource type="Texture2D" uid="uid://bx5l8j5ynccb8" path="res://main_menu/25188.png" id="1_bywi5"]
 [ext_resource type="Script" uid="uid://7i2ebg5igojw" path="res://scripts/infomenu.gd" id="1_w15kw"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://dchiobpwouw0r" path="res://info_menu/ui2.png" id="3_8q30p"]
 [ext_resource type="Texture2D" uid="uid://bl10nvgpc6dgc" path="res://info_menu/ui1.png" id="4_w15kw"]
 [ext_resource type="Texture2D" uid="uid://dap5ihlf40qbc" path="res://info_menu/soldrier.png" id="6_lasws"]
-[ext_resource type="FontFile" uid="uid://dqiwaltnyashr" path="res://info_menu/Good Times Rg.otf" id="8_0fhuo"]
 [ext_resource type="Texture2D" uid="uid://buftix33atlk7" path="res://info_menu/ui6.png" id="9_oqbmf"]
 [ext_resource type="AudioStream" uid="uid://1jfjspvlgeb2" path="res://buttons/mixkit-handgun-click-1660.mp3" id="9_w15kw"]
 [ext_resource type="Theme" uid="uid://borsf41at585l" path="res://buttons/exit_button.tres" id="10_0fhuo"]
@@ -69,54 +68,50 @@ texture = ExtResource("9_oqbmf")
 
 [node name="controls_Label4" type="Label" parent="labels"]
 modulate = Color(0, 0, 0, 1)
-offset_left = 1459.25
-offset_top = 299.75
-offset_right = 1702.25
-offset_bottom = 320.75
-scale = Vector2(1.5, 1.5)
-theme_override_fonts/font = ExtResource("8_0fhuo")
-text = "KEYBINDS"
+offset_left = 1450.0
+offset_top = 293.0
+offset_right = 1693.0
+offset_bottom = 316.0
+scale = Vector2(1.55666, 1.93013)
+text = "ΚΟΥΜΠΙΑ"
 label_settings = SubResource("LabelSettings_k6qye")
 horizontal_alignment = 1
 
 [node name="controls_Label" type="Label" parent="labels"]
-offset_left = 1457.25
-offset_top = 296.75
-offset_right = 1700.25
-offset_bottom = 317.75
-scale = Vector2(1.5, 1.5)
-theme_override_fonts/font = ExtResource("8_0fhuo")
-text = "KEYBINDS"
+offset_left = 1448.0
+offset_top = 290.0
+offset_right = 1691.0
+offset_bottom = 313.0
+scale = Vector2(1.55666, 1.93013)
+text = "ΚΟΥΜΠΙΑ"
 label_settings = SubResource("LabelSettings_k6qye")
 horizontal_alignment = 1
 
 [node name="controls_Label3" type="Label" parent="labels"]
 modulate = Color(0, 0, 0, 1)
-offset_left = 1479.25
-offset_top = 353.75
-offset_right = 1722.25
-offset_bottom = 488.75
+offset_left = 1479.0
+offset_top = 354.0
+offset_right = 1716.0
+offset_bottom = 523.0
 scale = Vector2(1.5, 1.5)
-theme_override_fonts/font = ExtResource("8_0fhuo")
-text = "FORWARD = W
-BACKWARD = S
-LEFT = A
-RIGHT = D
+text = "ΜΠΡΟΣΤΑ  = W
+ΠΙΣΩ = S
+ΑΡΙΣΤΕΡΑ = A
+ΔΕΞΙΑ = D
 INTERACTION = F
 SHOOT = LEFT CLICK"
 label_settings = SubResource("LabelSettings_k6qye")
 
 [node name="controls_Label2" type="Label" parent="labels"]
-offset_left = 1476.25
-offset_top = 350.75
-offset_right = 1719.25
-offset_bottom = 508.75
+offset_left = 1475.0
+offset_top = 351.0
+offset_right = 1718.0
+offset_bottom = 530.0
 scale = Vector2(1.5, 1.5)
-theme_override_fonts/font = ExtResource("8_0fhuo")
-text = "FORWARD = W
-BACKWARD = S
-LEFT = A
-RIGHT = D
+text = "ΜΠΡΟΣΤΑ  = W
+ΠΙΣΩ  = S
+ΑΡΙΣΤΕΡΑ = A
+ΔΕΞΙΑ  = D
 INTERACTION = F
 SHOOT = LEFT CLICK
 "
@@ -129,8 +124,7 @@ offset_top = 302.0
 offset_right = 344.5
 offset_bottom = 323.0
 scale = Vector2(1.5, 1.5)
-theme_override_fonts/font = ExtResource("8_0fhuo")
-text = "YOURSELF"
+text = "ΝΤΑΝΙΕΛ"
 label_settings = SubResource("LabelSettings_k6qye")
 horizontal_alignment = 1
 
@@ -140,62 +134,56 @@ offset_top = 300.0
 offset_right = 341.5
 offset_bottom = 321.0
 scale = Vector2(1.5, 1.5)
-theme_override_fonts/font = ExtResource("8_0fhuo")
-text = "YOURSELF"
+text = "ΝΤΑΝΙΕΛ"
 label_settings = SubResource("LabelSettings_k6qye")
 horizontal_alignment = 1
 
 [node name="playthrough_label2" type="Label" parent="labels"]
 modulate = Color(0, 0, 0, 1)
-offset_left = 529.5
-offset_top = 785.0
-offset_right = 1109.5
-offset_bottom = 806.0
-scale = Vector2(1.5, 1.5)
-theme_override_fonts/font = ExtResource("8_0fhuo")
-text = "PLAYTHROUGH"
+offset_left = 535.0
+offset_top = 778.0
+offset_right = 1115.0
+offset_bottom = 801.0
+scale = Vector2(1.49679, 1.93441)
+text = "ΤΡΟΠΟΣ ΠΑΙΧΝΙΔΙΟΥ"
 label_settings = SubResource("LabelSettings_k6qye")
 horizontal_alignment = 1
 
 [node name="playthrough_label" type="Label" parent="labels"]
-offset_left = 525.5
-offset_top = 783.0
-offset_right = 1105.5
-offset_bottom = 804.0
-scale = Vector2(1.5, 1.5)
-theme_override_fonts/font = ExtResource("8_0fhuo")
-text = "PLAYTHROUGH"
+offset_left = 531.0
+offset_top = 776.0
+offset_right = 1111.0
+offset_bottom = 799.0
+scale = Vector2(1.49679, 1.93441)
+text = "ΤΡΟΠΟΣ ΠΑΙΧΝΙΔΙΟΥ"
 label_settings = SubResource("LabelSettings_k6qye")
 horizontal_alignment = 1
 
 [node name="playthrough_label4" type="Label" parent="labels"]
 modulate = Color(0, 0, 0, 1)
-offset_left = 545.5
-offset_top = 819.0
-offset_right = 1109.5
-offset_bottom = 966.0
-scale = Vector2(1.5, 1.5)
-theme_override_fonts/font = ExtResource("8_0fhuo")
-text = "Survive the waves of enemies to obtain the 
-security card and enter the guarded building
- to save your brother"
+offset_left = 543.0
+offset_top = 774.0
+offset_right = 1107.0
+offset_bottom = 921.0
+scale = Vector2(1.50021, 2.01813)
+text = "ΕΠΙΒΙΩΣΕ ΑΠΟ ΤΑ  ΕΧΡΘΙΚΑ ΚΥΜΑΤΑ ΚΑΙ ΠΡΟΣΠΑΘΗΣΕ ΝΑ ΑΠΟΚΤΗΣΕΙΣ ΤΗΝ ΚΑΡΤΑ ΑΣΦΑΛΕΙΑΣ ΓΙΑ ΝΑ ΠΑΡΕΙΣ ΠΡΟΣΒΑΣΗ ΣΤΟ ΚΤΗΡΙΟ ΠΟΥ ΚΡΥΒΟΥΝ ΤΟΝ ΑΔΕΡΦΟ ΣΟΥ"
 label_settings = SubResource("LabelSettings_k6qye")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="playthrough_label3" type="Label" parent="labels"]
-offset_left = 542.5
-offset_top = 816.0
-offset_right = 1106.5
-offset_bottom = 963.0
-scale = Vector2(1.5, 1.5)
-theme_override_fonts/font = ExtResource("8_0fhuo")
-text = "Survive the waves of enemies to obtain the 
-security card and enter the guarded building
- to save your brother"
+offset_left = 540.0
+offset_top = 771.0
+offset_right = 1104.0
+offset_bottom = 918.0
+scale = Vector2(1.50021, 2.01813)
+theme_override_font_sizes/font_size = 55
+text = "ΕΠΙΒΙΩΣΕ ΑΠΟ ΤΑ  ΕΧΡΘΙΚΑ ΚΥΜΑΤΑ ΚΑΙ ΠΡΟΣΠΑΘΗΣΕ ΝΑ ΑΠΟΚΤΗΣΕΙΣ ΤΗΝ ΚΑΡΤΑ ΑΣΦΑΛΕΙΑΣ ΓΙΑ ΝΑ ΠΑΡΕΙΣ ΠΡΟΣΒΑΣΗ ΣΤΟ ΚΤΗΡΙΟ ΠΟΥ ΚΡΥΒΟΥΝ ΤΟΝ ΑΔΕΡΦΟ ΣΟΥ"
 label_settings = SubResource("LabelSettings_k6qye")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="back" type="Button" parent="."]
 offset_left = 900.0
